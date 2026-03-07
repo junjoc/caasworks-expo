@@ -857,21 +857,6 @@ async function handleSubmit(e){
     timestamp: new Date().toLocaleString('ko-KR', {timeZone:'Asia/Seoul'})
   };
 
-  // If Google Script URL is not set, show demo mode
-  if(GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbw2Drxu3cTvgOZmkfVz8mjBLJtIA1PQCSQhUsMOq1c6jgFBRRcr6zvEX-Qy7JR6jCI/exec'){
-    btn.textContent = '신청이 완료되었습니다!';
-    btn.style.background = 'linear-gradient(135deg,#4CAF50,#2E7D32)';
-    btn.disabled = true;
-    showToast('✓ 상담 신청이 완료되었습니다. (데모 모드)');
-    setTimeout(()=>{
-      btn.textContent = '상담 신청하기';
-      btn.style.background = 'linear-gradient(135deg,#2196F3,#1565C0)';
-      btn.disabled = false;
-      form.reset();
-    },3000);
-    return;
-  }
-
   // Submit to Google Sheets
   btn.textContent = '전송 중...';
   btn.disabled = true;
