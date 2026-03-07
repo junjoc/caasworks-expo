@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카스웍스 | 2026 대한민국목조건축박람회</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,20,40,0.88), rgba(0,30,60,0.92));
+            position: relative;
+        }
+        .gradient-text { background: linear-gradient(90deg, #FF8C00, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .blink { animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .product-img { transition: transform 0.3s; }
+        .product-img:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Banner -->
+    <div class="bg-orange-600 text-white text-center py-2.5 font-bold text-sm blink">
+        📢 2026 대한민국목조건축박람회 참가 기념 — 현장 상담 시 사은품 증정!
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <img src="images/caasworks-logo.png" alt="CaasWorks" class="h-8">
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+                <a href="#features" class="hover:text-blue-600 transition">핵심 가치</a>
+                <a href="#ai-tech" class="hover:text-blue-600 transition">AI 기술</a>
+                <a href="#products" class="hover:text-blue-600 transition">제품</a>
+                <a href="#dashboard" class="hover:text-blue-600 transition">플랫폼</a>
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-bold transition">상담 신청</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-[85vh] flex items-center text-white px-6 overflow-hidden">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center py-20">
+            <div>
+                <div class="mb-6 inline-block bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
+                    <span class="text-orange-400 font-bold text-sm">Wooden Architecture DX</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    목조 건축의 완성은<br><span class="gradient-text">데이터와 영상</span>입니다
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
+                    전국 4,300여 개 현장이 선택한 1등 공정관리 플랫폼 '카스웍스'<br>
+                    이제 목조 주택 현장도 스마트하게 관리하세요.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-extrabold text-lg shadow-2xl transition-all hover:scale-105 text-center">
+                        무료 상담 신청 →
+                    </a>
+                    <a href="#ai-tech" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 transition-all text-center">
+                        주요 기능 보기
+                    </a>
+                </div>
+                <div class="flex gap-10 mt-10">
+                    <div class="text-center"><p class="text-3xl font-extrabold text-orange-400">4,300+</p><p class="text-gray-400 text-sm mt-1">도입 현장</p></div>
+                    <div class="text-center"><p class="text-3xl font-extrabold text-orange-400">40+</p><p class="text-gray-400 text-sm mt-1">공공기관·대기업</p></div>
+                    <div class="text-center"><p class="text-3xl font-extrabold text-orange-400">99점</p><p class="text-gray-400 text-sm mt-1">평균 안전지수</p></div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <img src="images/illustration-site.png" alt="스마트 건설현장" class="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-orange-500 font-bold text-sm mb-3">WHY CAASWORKS</p>
+                <h2 class="text-4xl font-bold text-blue-950 mb-4">하자 분쟁 없는 목조 주택 시공,<br>카스웍스가 증명합니다</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+                <div class="space-y-8">
+                    <div class="flex gap-5 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                        <div class="bg-blue-100 p-4 rounded-xl h-fit flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">투명한 공정 기록</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">매립되는 자재, 단열재 시공 과정을 영상으로 남겨 건축주에게 신뢰를 줍니다. 시공 당시 영상 확보로 하자 원인 분석이 용이합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                        <div class="bg-green-100 p-4 rounded-xl h-fit flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">실시간 현장 관제</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">사무실에서 스마트폰으로 전국 목조 주택 현장의 진행 상황을 체크하세요. 현장 방문 없이 운영 비용을 절감합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                        <div class="bg-orange-100 p-4 rounded-xl h-fit flex-shrink-0">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">AI 안전관리 자동화</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">안전모 미착용, 쓰러짐, 화재 징후를 AI가 자동 감지하고 즉시 알림. 중대재해처벌법 대응에 최적화되어 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="images/remote-monitoring.png" alt="원격 모니터링" class="rounded-2xl shadow-xl w-full h-48 object-cover">
+                    <img src="images/timelapse-progress.png" alt="타임랩스 공정 기록" class="rounded-2xl shadow-xl w-full h-48 object-cover mt-8">
+                    <img src="images/cctv-thermal-view.png" alt="CCTV 열화상" class="rounded-2xl shadow-xl w-full h-48 object-cover">
+                    <img src="images/dashboard-safety.png" alt="안전관리 대시보드" class="rounded-2xl shadow-xl w-full h-48 object-cover mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Technology -->
+    <section id="ai-tech" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-blue-600 font-bold text-sm mb-3">AI TECHNOLOGY</p>
+                <h2 class="text-4xl font-bold text-blue-950 mb-4">핵심 AI 기술</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">소개서에 담긴 핵심 AI 기술과 영상 관리 솔루션을 현장에서 직접 경험해 보세요.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in">
+                <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+                    <div class="h-44 overflow-hidden">
+                        <img src="images/ai-helmet-detect.png" alt="AI 안전모 감지" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold mb-2">AI 안전모 감지</h4>
+                        <p class="text-gray-500 text-sm">CCTV를 통해 실시간으로 미착용자 포착 및 관리자 자동 알림.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+                    <div class="h-44 overflow-hidden">
+                        <img src="images/dashboard-ai-detection.png" alt="스켈레톤 쓰러짐 감지" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold mb-2">스켈레톤 쓰러짐 감지</h4>
+                        <p class="text-gray-500 text-sm">관절 데이터로 사고 '과정'을 완벽 포착. 즉시 알림 발송.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+                    <div class="h-44 overflow-hidden">
+                        <img src="images/ai-fire-detect.png" alt="화재 감지" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold mb-2">지능형 열화상 관제</h4>
+                        <p class="text-gray-500 text-sm">화재 징후 및 근로자 온열 질환을 데이터로 사전 예방.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+                    <div class="h-44 overflow-hidden">
+                        <img src="images/ai-counting.png" alt="근로자 카운팅" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold mb-2">근로자 자동 카운팅</h4>
+                        <p class="text-gray-500 text-sm">현장 투입 인력을 AI가 자동 집계. 효율적 인력 관리.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-orange-500 font-bold text-sm mb-3">PRODUCTS</p>
+                <h2 class="text-4xl font-bold text-blue-950 mb-4">제품 라인업</h2>
+                <p class="text-gray-600">현장 상황에 맞는 최적의 장비와 AI 솔루션을 제공합니다.</p>
+            </div>
+
+            <!-- CCTV Products -->
+            <h3 class="text-2xl font-bold text-blue-950 mb-8 fade-in">AI 영상장비</h3>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16 fade-in">
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition text-center group">
+                    <div class="h-40 flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="images/tsitebox.png" alt="T-SiteBox" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-sm mb-1">T-SiteBox</h4>
+                    <p class="text-gray-500 text-xs">SKT 공동개발 AI 라우터</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition text-center group">
+                    <div class="h-40 flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="images/cctv-fixed.png" alt="지능형 CCTV" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-sm mb-1">지능형 CCTV</h4>
+                    <p class="text-gray-500 text-xs">FHD / IP66 / 이동형·고정형</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition text-center group">
+                    <div class="h-40 flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="images/cctv-thermal.png" alt="열화상 CCTV" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-sm mb-1">열화상 CCTV</h4>
+                    <p class="text-gray-500 text-xs">4MP / IP67 / 최대 123m 감지</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition text-center group">
+                    <div class="h-40 flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="images/cctv-solar.png" alt="태양광 CCTV" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-sm mb-1">태양광 CCTV</h4>
+                    <p class="text-gray-500 text-xs">자가발전 / 나대지·오지 최적</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition text-center group">
+                    <div class="h-40 flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="images/wearable-cam.png" alt="웨어러블 카메라" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-sm mb-1">웨어러블 카메라</h4>
+                    <p class="text-gray-500 text-xs">초경량 / 무선 라이브 송출</p>
+                </div>
+            </div>
+
+            <!-- Safety Equipment -->
+            <h3 class="text-2xl font-bold text-blue-950 mb-8 fade-in">스마트 안전장비</h3>
+            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-5 fade-in">
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/smart-band.png" alt="스마트 밴드" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">스마트 밴드</h4>
+                    <p class="text-gray-400 text-[10px]">체온·심박 모니터링</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/smart-helmet.png" alt="스마트 안전모" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">스마트 안전모</h4>
+                    <p class="text-gray-400 text-[10px]">착용감지·위치트래킹</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/temperature-meter.png" alt="체감온도계" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">체감온도계</h4>
+                    <p class="text-gray-400 text-[10px]">온열질환 예방</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/work-stop.png" alt="작업중지권" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">작업중지권</h4>
+                    <p class="text-gray-400 text-[10px]">LTE 무선·경광등</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/gas-detector.png" alt="복합 가스측정기" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">복합 가스측정기</h4>
+                    <p class="text-gray-400 text-[10px]">4종 가스 검측</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition text-center">
+                    <div class="h-32 flex items-center justify-center mb-3 overflow-hidden">
+                        <img src="images/smart-tag.png" alt="스마트 태그" class="max-h-full product-img">
+                    </div>
+                    <h4 class="font-bold text-xs mb-1">스마트 태그</h4>
+                    <p class="text-gray-400 text-[10px]">SOS·작업중지권</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-orange-400 font-bold text-sm mb-3">PLATFORM</p>
+                <h2 class="text-4xl font-bold mb-4">공정관리 플랫폼</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">대시보드, 공정표, 타임랩스, 안전관리까지 — 올인원 건설 프로젝트 관리</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+                    <img src="images/dashboard-safety.png" alt="실시간 안전관리 대시보드" class="w-full">
+                    <div class="bg-gray-800 p-5">
+                        <h4 class="font-bold mb-1">실시간 안전관리</h4>
+                        <p class="text-gray-400 text-sm">안전지수 산출, 취약 시간·구역 관리, 감지 이력 통계</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+                    <img src="images/dashboard-schedule.png" alt="공정관리 대시보드" class="w-full">
+                    <div class="bg-gray-800 p-5">
+                        <h4 class="font-bold mb-1">공정관리 & 타임랩스</h4>
+                        <p class="text-gray-400 text-sm">공정표, 작업보고, 타임랩스 자동 생성, 일/월별 이력 관리</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 fade-in">
+                <img src="images/dashboard-project.png" alt="프로젝트 관리" class="w-full">
+                <div class="bg-gray-800 p-5">
+                    <h4 class="font-bold mb-1">프로젝트 통합 관리</h4>
+                    <p class="text-gray-400 text-sm">본사와 현장 간 실시간 협업. CCTV 영상, 공정률, 작업보고를 한눈에 확인합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="py-24 container mx-auto px-6 text-center">
+        <div class="bg-blue-950 rounded-[3rem] py-20 px-10 text-white relative overflow-hidden fade-in">
+            <div class="relative z-10">
+                <h3 class="text-4xl font-bold mb-6">지금 바로 상세 소개서를 받아보세요</h3>
+                <p class="text-blue-200 mb-12 text-lg">카스웍스의 모든 기능과 도입 비용, 성공 사례가 담겨 있습니다.</p>
+                <a href="#" download class="inline-block bg-white text-blue-950 px-12 py-6 rounded-2xl font-black text-2xl hover:bg-orange-500 hover:text-white transition-all shadow-white/10 shadow-2xl mb-8">
+                    📥 PDF 소개서 다운로드
+                </a>
+                <p class="text-blue-400 text-sm">파일명: 카스웍스_서비스_소개서_공정관리_v26.pdf</p>
+            </div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <p class="text-orange-500 font-bold text-sm mb-3">CONTACT</p>
+                    <h2 class="text-4xl font-bold text-blue-950 mb-4">상담 신청</h2>
+                    <p class="text-gray-600">아래 양식을 작성해 주시면 담당자가 연락드립니다.</p>
+                </div>
+                <form id="contactForm" class="bg-white rounded-3xl p-10 shadow-lg fade-in" onsubmit="handleSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-5 mb-5">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">회사명 *</label>
+                            <input type="text" name="company" placeholder="회사명" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-0 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">담당자명 *</label>
+                            <input type="text" name="name" placeholder="성함" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-0 outline-none transition">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-5 mb-5">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">연락처 *</label>
+                            <input type="tel" name="phone" placeholder="010-0000-0000" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-0 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">이메일</label>
+                            <input type="email" name="email" placeholder="email@company.com" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-0 outline-none transition">
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="block text-sm font-semibold text-gray-600 mb-2">관심 분야</label>
+                        <select name="interest" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 outline-none transition">
+                            <option value="">선택해주세요</option>
+                            <option>AI CCTV (공정관리)</option>
+                            <option>AI CCTV (안전관리)</option>
+                            <option>스마트 안전장비</option>
+                            <option>공정관리 플랫폼</option>
+                            <option>통합 솔루션 (전체)</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-600 mb-2">문의 내용</label>
+                        <textarea name="message" rows="3" placeholder="현장 규모, 관심 제품 등 자유롭게 작성해주세요" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-blue-500 outline-none transition resize-vertical"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg rounded-xl transition-all hover:shadow-lg">
+                        상담 신청하기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <img src="images/caasworks-logo.png" alt="CaasWorks" class="h-8 mx-auto mb-4 brightness-[10]">
+            <p class="font-bold text-white mb-1">CaasWorks — Construction as a Service Works</p>
+            <p class="text-sm mb-4">산업·건설 현장에 최적화된 스마트 AI 솔루션</p>
+            <p class="text-sm">
+                <a href="https://www.aicon.ai" target="_blank" class="text-blue-400 hover:underline">www.aicon.ai</a>
+                &nbsp;|&nbsp; AICON &nbsp;|&nbsp; 1666-1967
+            </p>
+            <p class="text-xs text-gray-600 mt-6">&copy; 2026 AICON Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 bg-gray-900 text-white px-7 py-4 rounded-xl font-semibold shadow-2xl z-50 opacity-0 transition-all duration-400"></div>
+
+    <script>
+    // Scroll fade-in
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Toast
+    function showToast(msg, ms = 3000) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.style.transform = 'translateX(-50%) translateY(0)';
+        t.style.opacity = '1';
+        setTimeout(() => { t.style.transform = 'translateX(-50%) translateY(100px)'; t.style.opacity = '0'; }, ms);
+    }
+
+    // Form submit
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2Drxu3cTvgOZmkfVz8mjBLJtIA1PQCSQhUsMOq1c6jgFBRRcr6zvEX-Qy7JR6jCI/exec';
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const btn = document.getElementById('submitBtn');
+        const fd = new FormData(form);
+        const data = {
+            company: fd.get('company'), name: fd.get('name'),
+            phone: fd.get('phone'), email: fd.get('email') || '',
+            interest: fd.get('interest') || '', message: fd.get('message') || '',
+            timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
+        };
+        btn.textContent = '전송 중...';
+        btn.disabled = true;
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            btn.textContent = '신청 완료!';
+            btn.classList.replace('bg-orange-500', 'bg-green-500');
+            showToast('✓ 상담 신청이 완료되었습니다.');
+            setTimeout(() => { btn.textContent = '상담 신청하기'; btn.classList.replace('bg-green-500', 'bg-orange-500'); btn.disabled = false; form.reset(); }, 3000);
+        } catch {
+            btn.textContent = '전송 실패 - 다시 시도';
+            btn.classList.replace('bg-orange-500', 'bg-red-500');
+            showToast('전송에 실패했습니다. 다시 시도해주세요.');
+            setTimeout(() => { btn.textContent = '상담 신청하기'; btn.classList.replace('bg-red-500', 'bg-orange-500'); btn.disabled = false; }, 3000);
+        }
+    }
+    </script>
+
+</body>
+</html>
