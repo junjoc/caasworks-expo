@@ -198,6 +198,65 @@ footer{background:#1a1a2e;color:rgba(255,255,255,.5);padding:36px 0;text-align:c
 footer .footer-logo{font-size:18px;font-weight:800;color:#fff;margin-bottom:10px}
 footer a{color:#64B5F6;text-decoration:none}
 
+/* ── Hero Dashboard ── */
+.hero-dash{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr .7fr;gap:8px;height:100%;min-height:340px;font-size:11px}
+.dash-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.dash-panel:hover{border-color:rgba(100,181,246,.35)}
+.dash-label{font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.dash-label .dot{width:5px;height:5px;border-radius:50%;background:#4CAF50;animation:pulse 1.5s infinite}
+.dash-label .dot-red{background:#ef5350}
+.dp-cctv{grid-row:1/3;position:relative}
+.dp-cctv img{width:100%;height:100%;object-fit:cover;border-radius:6px;opacity:.85}
+.dp-cctv .live-badge{position:absolute;top:8px;right:8px;font-size:10px;padding:3px 10px}
+.detect-box{position:absolute;border:2px solid #4CAF50;border-radius:4px;opacity:0;animation:detectFade 4s infinite}
+.detect-box.b1{width:18%;height:28%;top:30%;left:20%;animation-delay:0s}
+.detect-box.b2{width:15%;height:25%;top:35%;left:55%;animation-delay:2s}
+.detect-box .detect-tag{position:absolute;top:-16px;left:0;font-size:8px;background:rgba(76,175,80,.85);color:#fff;padding:1px 6px;border-radius:3px;white-space:nowrap}
+.detect-stat{position:absolute;bottom:8px;left:8px;right:8px;display:flex;gap:6px}
+.detect-stat span{background:rgba(0,0,0,.6);color:#fff;padding:3px 8px;border-radius:4px;font-size:9px;font-weight:600;backdrop-filter:blur(4px)}
+.dp-equip .eq-rows{display:flex;flex-direction:column;gap:6px;flex:1;justify-content:center}
+.eq-row{display:flex;align-items:center;gap:8px}
+.eq-icon{width:26px;height:26px;background:rgba(100,181,246,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.eq-info{flex:1;min-width:0}
+.eq-name{font-size:9px;color:rgba(255,255,255,.5)}
+.eq-val{font-size:13px;font-weight:700;color:#fff}
+.eq-val .unit{font-size:9px;font-weight:400;color:rgba(255,255,255,.4)}
+.eq-status{width:6px;height:6px;border-radius:50%;background:#4CAF50;animation:pulse 2s infinite;flex-shrink:0}
+.heartline{width:100%;height:28px;margin-top:auto}
+.heartline path{fill:none;stroke:#ef5350;stroke-width:1.5;stroke-linecap:round;stroke-dasharray:200;stroke-dashoffset:200;animation:drawLine 3s linear infinite}
+.dp-video .vid-channels{display:flex;flex-direction:column;gap:5px;flex:1;justify-content:center}
+.vid-ch{display:flex;align-items:center;gap:8px}
+.vid-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid}
+.vid-dot.rec{border-color:#ef5350;background:#ef5350;animation:pulse 1s infinite}
+.vid-dot.idle{border-color:rgba(255,255,255,.3);background:transparent}
+.vid-name{font-size:10px;color:rgba(255,255,255,.6);flex:1}
+.vid-bar{width:50px;height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+.vid-bar-fill{height:100%;background:linear-gradient(90deg,#2196F3,#64B5F6);border-radius:2px;animation:progress 8s linear infinite}
+.vid-time{font-size:9px;color:rgba(255,255,255,.35);font-variant-numeric:tabular-nums}
+.dp-control{grid-column:1/-1;flex-direction:row;align-items:center;gap:12px;padding:8px 12px}
+.ctrl-sites{display:flex;gap:8px;flex:1}
+.ctrl-site{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.08)}
+.ctrl-site .site-dot{width:6px;height:6px;border-radius:50%;background:#4CAF50}
+.ctrl-site .site-name{font-size:9px;color:rgba(255,255,255,.6)}
+.ctrl-site .site-val{font-size:11px;font-weight:700;color:#fff}
+.ctrl-bars{display:flex;align-items:flex-end;gap:3px;height:28px}
+.ctrl-bar{width:6px;background:linear-gradient(to top,#1565C0,#64B5F6);border-radius:2px 2px 0 0;animation:barGrow 2s ease-out infinite alternate}
+.ctrl-bar:nth-child(1){height:40%;animation-delay:0s}
+.ctrl-bar:nth-child(2){height:70%;animation-delay:.2s}
+.ctrl-bar:nth-child(3){height:55%;animation-delay:.4s}
+.ctrl-bar:nth-child(4){height:85%;animation-delay:.6s}
+.ctrl-bar:nth-child(5){height:60%;animation-delay:.8s}
+.ctrl-bar:nth-child(6){height:90%;animation-delay:1s}
+.ctrl-bar:nth-child(7){height:45%;animation-delay:1.2s}
+.ctrl-alert{display:flex;align-items:center;gap:6px;background:rgba(76,175,80,.12);padding:5px 10px;border-radius:6px;border:1px solid rgba(76,175,80,.25);margin-left:auto}
+.ctrl-alert .alert-icon{font-size:12px}
+.ctrl-alert .alert-text{font-size:9px;color:#81C784;font-weight:600}
+@keyframes detectFade{0%,100%{opacity:0}15%,85%{opacity:1}}
+@keyframes drawLine{0%{stroke-dashoffset:200}100%{stroke-dashoffset:0}}
+@keyframes progress{0%{width:5%}100%{width:92%}}
+@keyframes barGrow{0%{transform:scaleY(.6)}100%{transform:scaleY(1)}}
+@keyframes scanline{0%{top:-2px}100%{top:100%}}
+
 /* ── Toast ── */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:#1a1a2e;color:#fff;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,.2);z-index:999;transition:.4s;opacity:0}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
@@ -222,8 +281,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
-  .hero-gallery-thumb img{height:100px}
-  .hero-thumb-label{font-size:12px;padding:6px 0 10px}
+  .hero-dash{min-height:400px;gap:10px}
+  .dash-panel{padding:12px 14px}
+  .dash-label{font-size:10px}
+  .eq-val{font-size:14px}
+  .eq-icon{width:28px;height:28px;font-size:13px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
   .sol-grid{gap:24px}
@@ -289,8 +351,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
-  .hero-gallery-thumb img{height:120px}
-  .hero-thumb-label{font-size:13px}
+  .hero-dash{min-height:460px;gap:12px}
+  .dash-panel{padding:14px 16px;border-radius:12px}
+  .dash-label{font-size:11px}
+  .eq-val{font-size:15px}
+  .ctrl-site{padding:6px 14px}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
   .sol-grid{grid-template-columns:repeat(3,1fr);gap:28px}
@@ -403,23 +468,90 @@ footer a{color:#64B5F6;text-decoration:none}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-gallery">
-        <div class="hero-gallery-main">
-          <img src="images/ai-helmet-detect.png" alt="AI 안전모 감지">
-          <span class="live-badge" style="position:absolute;top:14px;right:14px">AI 감지 중</span>
+      <div class="hero-dash">
+        <!-- AI CCTV 패널 (좌측 메인) -->
+        <div class="dash-panel dp-cctv">
+          <div class="dash-label"><span class="dot dot-red"></span>AI CCTV LIVE</div>
+          <img src="images/ai-helmet-detect.png" alt="AI CCTV 실시간 감지">
+          <span class="live-badge" style="position:absolute;top:8px;right:8px">AI 감지 중</span>
+          <div class="detect-box b1"><span class="detect-tag">안전모 ✓</span></div>
+          <div class="detect-box b2"><span class="detect-tag">안전모 ✓</span></div>
+          <div class="detect-stat">
+            <span>착용률 98%</span>
+            <span>감지 12명</span>
+            <span>이상 0건</span>
+          </div>
         </div>
-        <div class="hero-gallery-grid">
-          <div class="hero-gallery-thumb">
-            <img src="images/ai-fall-detect.png" alt="쓰러짐 감지">
-            <span class="hero-thumb-label">쓰러짐 감지</span>
+        <!-- 안전장비 패널 (우상단) -->
+        <div class="dash-panel dp-equip">
+          <div class="dash-label"><span class="dot"></span>스마트 안전장비</div>
+          <div class="eq-rows">
+            <div class="eq-row">
+              <div class="eq-icon">🌡</div>
+              <div class="eq-info"><div class="eq-name">체감온도</div><div class="eq-val">28.3<span class="unit">°C</span></div></div>
+              <div class="eq-status"></div>
+            </div>
+            <div class="eq-row">
+              <div class="eq-icon">💓</div>
+              <div class="eq-info"><div class="eq-name">심박 평균</div><div class="eq-val">76<span class="unit">bpm</span></div></div>
+              <div class="eq-status"></div>
+            </div>
+            <div class="eq-row">
+              <div class="eq-icon">⛑</div>
+              <div class="eq-info"><div class="eq-name">안전고리</div><div class="eq-val">정상</div></div>
+              <div class="eq-status"></div>
+            </div>
           </div>
-          <div class="hero-gallery-thumb">
-            <img src="images/ai-fire-detect.png" alt="화재 감지">
-            <span class="hero-thumb-label">화재 감지</span>
+          <svg class="heartline" viewBox="0 0 200 30"><path d="M0,15 L30,15 L35,5 L40,25 L45,10 L50,20 L55,15 L80,15 L85,5 L90,25 L95,10 L100,20 L105,15 L130,15 L135,5 L140,25 L145,10 L150,20 L155,15 L200,15"/></svg>
+        </div>
+        <!-- 동영상 기록관리 패널 (우중단) -->
+        <div class="dash-panel dp-video">
+          <div class="dash-label"><span class="dot dot-red"></span>동영상 기록관리</div>
+          <div class="vid-channels">
+            <div class="vid-ch">
+              <div class="vid-dot rec"></div>
+              <div class="vid-name">전경 촬영</div>
+              <div class="vid-bar"><div class="vid-bar-fill" style="animation-delay:0s"></div></div>
+              <div class="vid-time">02:34:11</div>
+            </div>
+            <div class="vid-ch">
+              <div class="vid-dot rec"></div>
+              <div class="vid-name">중요공종</div>
+              <div class="vid-bar"><div class="vid-bar-fill" style="animation-delay:1s"></div></div>
+              <div class="vid-time">01:12:45</div>
+            </div>
+            <div class="vid-ch">
+              <div class="vid-dot idle"></div>
+              <div class="vid-name">검측 촬영</div>
+              <div class="vid-bar"><div class="vid-bar-fill" style="animation-delay:2s;animation-play-state:paused;width:67%"></div></div>
+              <div class="vid-time">대기중</div>
+            </div>
           </div>
-          <div class="hero-gallery-thumb">
-            <img src="images/ai-counting.png" alt="근로자 카운팅">
-            <span class="hero-thumb-label">카운팅</span>
+        </div>
+        <!-- 관제실 패널 (하단 전체폭) -->
+        <div class="dash-panel dp-control">
+          <div class="ctrl-sites">
+            <div class="ctrl-site">
+              <div class="site-dot" style="background:#4CAF50"></div>
+              <div><div class="site-name">강남 현장</div><div class="site-val">정상</div></div>
+            </div>
+            <div class="ctrl-site">
+              <div class="site-dot" style="background:#4CAF50"></div>
+              <div><div class="site-name">송도 현장</div><div class="site-val">정상</div></div>
+            </div>
+            <div class="ctrl-site">
+              <div class="site-dot" style="background:#FFC107"></div>
+              <div><div class="site-name">용인 현장</div><div class="site-val">주의</div></div>
+            </div>
+          </div>
+          <div class="ctrl-bars">
+            <div class="ctrl-bar"></div><div class="ctrl-bar"></div><div class="ctrl-bar"></div>
+            <div class="ctrl-bar"></div><div class="ctrl-bar"></div><div class="ctrl-bar"></div>
+            <div class="ctrl-bar"></div>
+          </div>
+          <div class="ctrl-alert">
+            <span class="alert-icon">✅</span>
+            <span class="alert-text">전체 현장 안전</span>
           </div>
         </div>
       </div>
