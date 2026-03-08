@@ -105,8 +105,8 @@ nav a:hover{color:#2196F3}
 .scene-panel{display:none}
 .scene-panel.active{display:block}
 .scene-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
-.scene-img{position:relative;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06);display:flex;align-items:center}
-.scene-img img{width:100%;display:block}
+.scene-img{position:relative;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.scene-img img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}
 .scene-marker{position:absolute;width:26px;height:26px;background:linear-gradient(135deg,#2196F3,#1565C0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(33,150,243,.4);z-index:2;border:2px solid #fff;pointer-events:none}
 .scene-items{display:flex;flex-direction:column;gap:14px;justify-content:center}
 .scene-item{background:#f8fafc;border-radius:12px;padding:20px 24px;border:1px solid #eee;display:flex;align-items:flex-start;gap:14px;transition:.3s}
