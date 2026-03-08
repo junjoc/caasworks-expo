@@ -980,16 +980,31 @@ const obs = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
 // ── Product tab filter ──
+function filterProducts(cat){
+  const cards = document.querySelectorAll('.prod-card');
+  if(cat==='all'){
+    // 전체: 각 카테고리별 첫 번째 카드만 표시
+    const shown = {};
+    cards.forEach(card=>{
+      const c = card.dataset.cat;
+      if(!shown[c]){shown[c]=true;card.style.display='';}
+      else{card.style.display='none';}
+    });
+  } else {
+    cards.forEach(card=>{
+      card.style.display = card.dataset.cat===cat ? '' : 'none';
+    });
+  }
+}
 document.querySelectorAll('.prod-tab').forEach(tab=>{
   tab.addEventListener('click',()=>{
     document.querySelectorAll('.prod-tab').forEach(t=>t.classList.remove('active'));
     tab.classList.add('active');
-    const cat = tab.dataset.cat;
-    document.querySelectorAll('.prod-card').forEach(card=>{
-      card.style.display = (cat==='all' || card.dataset.cat===cat) ? '' : 'none';
-    });
+    filterProducts(tab.dataset.cat);
   });
 });
+// 초기 로드 시 전체 탭 적용
+filterProducts('all');
 
 // ── Toast helper ──
 function showToast(msg, duration=3000){
