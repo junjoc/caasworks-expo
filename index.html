@@ -199,10 +199,10 @@ footer .footer-logo{font-size:18px;font-weight:800;color:#fff;margin-bottom:10px
 footer a{color:#64B5F6;text-decoration:none}
 
 /* ── Hero Dashboard (4-CCTV Square Grid) ── */
-.hero-dash{display:flex;flex-direction:column;gap:0;height:100%;min-height:320px;background:rgba(0,0,0,.45);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-.cctv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;flex:1;padding:3px}
-.cctv-cell{position:relative;overflow:hidden;border-radius:6px}
-.cctv-cell img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .4s}
+.hero-dash{display:flex;flex-direction:column;gap:0;height:100%;background:rgba(0,0,0,.45);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.cctv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:3px}
+.cctv-cell{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:1}
+.cctv-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .cctv-cell:hover img{transform:scale(1.05)}
 .cctv-hud{position:absolute;top:0;left:0;right:0;padding:5px 8px;background:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 85%);display:flex;align-items:center;justify-content:space-between;z-index:2}
 .cctv-ch{font-size:9px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.5px}
@@ -249,7 +249,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
-  .hero-dash{min-height:400px}
+  .hero-dash{min-height:auto}
   .cctv-ch{font-size:10px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
@@ -316,7 +316,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
-  .hero-dash{min-height:460px}
+  .hero-dash{min-height:auto}
   .cctv-ch{font-size:11px}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
