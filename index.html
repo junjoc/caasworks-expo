@@ -199,40 +199,39 @@ footer .footer-logo{font-size:18px;font-weight:800;color:#fff;margin-bottom:10px
 footer a{color:#64B5F6;text-decoration:none}
 
 /* ── Hero Dashboard (CCTV Multi-View) ── */
-.hero-dash{display:grid;grid-template-columns:1fr 1fr 1.4fr;grid-template-rows:1fr 1fr auto;gap:3px;height:100%;min-height:380px;background:rgba(0,0,0,.5);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.hero-dash{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr auto;gap:3px;height:100%;min-height:360px;background:rgba(0,0,0,.45);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
 .cctv-cell{position:relative;overflow:hidden}
 .cctv-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.cctv-cell:hover img{transform:scale(1.05)}
-.cctv-hud{position:absolute;top:0;left:0;right:0;padding:5px 8px;background:linear-gradient(to bottom,rgba(0,0,0,.75),transparent);display:flex;align-items:center;justify-content:space-between;z-index:2}
+.cctv-cell:hover img{transform:scale(1.04)}
+.cctv-hud{position:absolute;top:0;left:0;right:0;padding:5px 8px;background:linear-gradient(to bottom,rgba(0,0,0,.72),transparent 70%);display:flex;align-items:center;justify-content:space-between;z-index:2}
 .cctv-ch{font-size:9px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.5px}
-.cctv-type{font-size:8px;color:rgba(255,255,255,.5);margin-left:5px;font-weight:400}
+.cctv-type{font-size:8px;color:rgba(255,255,255,.55);margin-left:5px;font-weight:400}
 .cctv-rec{display:flex;align-items:center;gap:3px;font-size:8px;color:#ef5350;font-weight:700;letter-spacing:.5px}
 .cctv-rec .rdot{width:5px;height:5px;border-radius:50%;background:#ef5350;animation:pulse 1s infinite}
-.cctv-stat{position:absolute;bottom:0;left:0;right:0;padding:4px 8px;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);display:flex;gap:5px;z-index:2}
+.cctv-stat{position:absolute;bottom:0;left:0;right:0;padding:4px 8px;background:linear-gradient(to top,rgba(0,0,0,.65),transparent);display:flex;gap:5px;z-index:2}
 .cctv-stat span{font-size:8px;color:#fff;font-weight:600;background:rgba(76,175,80,.35);padding:2px 6px;border-radius:3px;backdrop-filter:blur(4px)}
 .cctv-stat span.warn{background:rgba(239,83,80,.4);color:#ffcdd2}
+/* 관제 메인 (좌측, 2행 span) */
 .cctv-main{grid-row:1/3;position:relative;overflow:hidden}
 .cctv-main img{width:100%;height:100%;object-fit:cover;object-position:left top;display:block}
-.cctv-main-hud{position:absolute;top:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);display:flex;align-items:center;justify-content:space-between;z-index:2}
+.cctv-main-hud{position:absolute;top:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to bottom,rgba(0,0,0,.65),transparent 80%);display:flex;align-items:center;justify-content:space-between;z-index:2}
 .cctv-main-hud .main-title{font-size:10px;font-weight:700;color:#fff;letter-spacing:.5px}
 .cctv-main-hud .live-badge{display:flex;align-items:center;gap:4px;font-size:9px;color:#4CAF50;font-weight:700}
-.cctv-main-hud .live-badge .ldot{width:6px;height:6px;border-radius:50%;background:#4CAF50;animation:pulse 1.5s infinite}
+.cctv-main-hud .ldot{width:6px;height:6px;border-radius:50%;background:#4CAF50;animation:pulse 1.5s infinite}
 .cctv-scan{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(76,175,80,.5),transparent);animation:scanline 5s linear infinite;z-index:3;pointer-events:none}
-/* Bottom info strip */
-.dash-strip{grid-column:1/-1;display:flex;align-items:center;gap:3px;padding:6px 10px;background:rgba(255,255,255,.04)}
-.strip-block{display:flex;align-items:center;gap:6px;padding:0 10px;flex:1;min-width:0}
-.strip-block+.strip-block{border-left:1px solid rgba(255,255,255,.08)}
-.strip-icon{font-size:12px;flex-shrink:0}
-.strip-label{font-size:8px;color:rgba(255,255,255,.4);line-height:1}
-.strip-val{font-size:11px;font-weight:700;color:#fff;line-height:1.2}
-.strip-val .unit{font-size:8px;font-weight:400;color:rgba(255,255,255,.4)}
-.strip-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
-.strip-dot.ok{background:#4CAF50}
-.strip-dot.rec{background:#ef5350}
-.strip-dot.caution{background:#FFC107}
-.strip-mini{display:flex;align-items:center;gap:3px}
-.strip-mini span{font-size:8px;color:rgba(255,255,255,.6)}
-.strip-mini .sm-val{color:#fff;font-weight:600}
+/* 하단 미니 CCTV 스트립 */
+.dash-strip{grid-column:1/-1;display:flex;align-items:stretch;gap:3px;background:rgba(0,0,0,.2);overflow:hidden}
+.strip-cam{position:relative;flex:1;min-width:0;overflow:hidden}
+.strip-cam img{width:100%;height:100%;object-fit:cover;display:block;min-height:50px}
+.strip-cam .cam-tag{position:absolute;bottom:0;left:0;right:0;padding:2px 6px;background:rgba(0,0,0,.7);font-size:8px;color:#fff;font-weight:600;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.strip-cam .cam-tag.tag-warn{background:rgba(239,83,80,.7)}
+.strip-info{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:6px 12px;min-width:120px;background:rgba(255,255,255,.03)}
+.strip-row{display:flex;align-items:center;gap:5px}
+.strip-row .sr-dot{width:4px;height:4px;border-radius:50%;flex-shrink:0}
+.strip-row .sr-dot.ok{background:#4CAF50}
+.strip-row .sr-dot.rec{background:#ef5350;animation:pulse 1s infinite}
+.strip-row .sr-label{font-size:8px;color:rgba(255,255,255,.45);flex:1}
+.strip-row .sr-val{font-size:9px;font-weight:700;color:#fff}
 @keyframes scanline{0%{top:-2px}100%{top:100%}}
 
 /* ── Toast ── */
@@ -259,9 +258,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
-  .hero-dash{min-height:420px;gap:4px}
+  .hero-dash{min-height:400px;gap:4px}
   .cctv-ch{font-size:10px}
-  .strip-val{font-size:12px}
+  .strip-cam img{min-height:56px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
   .sol-grid{gap:24px}
@@ -327,10 +326,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
-  .hero-dash{min-height:480px;gap:4px}
+  .hero-dash{min-height:460px;gap:4px}
   .cctv-ch{font-size:11px}
-  .strip-val{font-size:13px}
-  .dash-strip{padding:8px 14px}
+  .strip-cam img{min-height:64px}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
   .sol-grid{grid-template-columns:repeat(3,1fr);gap:28px}
@@ -444,62 +442,38 @@ footer a{color:#64B5F6;text-decoration:none}
     </div>
     <div class="hero-visual">
       <div class="hero-dash">
-        <!-- CH.01 안전모 감지 -->
-        <div class="cctv-cell">
-          <div class="cctv-hud"><span><span class="cctv-ch">CH.01</span><span class="cctv-type">안전모 감지</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
-          <img src="images/ai-helmet-detect.png" alt="안전모 미착용 감지">
-          <div class="cctv-stat"><span>착용률 98%</span><span>감지 12명</span></div>
-        </div>
-        <!-- CH.02 쓰러짐 감지 -->
-        <div class="cctv-cell">
-          <div class="cctv-hud"><span><span class="cctv-ch">CH.02</span><span class="cctv-type">쓰러짐 감지</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
-          <img src="images/ai-fall-detect.png" alt="쓰러짐 감지">
-          <div class="cctv-stat"><span class="warn">⚠ FALL DETECTED</span></div>
-        </div>
-        <!-- 통합 관제 대시보드 (우측 큰 패널) -->
+        <!-- 관제 대시보드 메인 (좌측 큰 패널, 2행 span) -->
         <div class="cctv-main">
           <div class="cctv-main-hud"><span class="main-title">CaasWorks 통합 관제</span><span class="live-badge"><span class="ldot"></span>LIVE</span></div>
           <img src="images/관제대시보드_예시_01.jpg" alt="CaasWorks 통합 관제 대시보드">
           <div class="cctv-scan"></div>
         </div>
-        <!-- CH.03 화재 감지 -->
+        <!-- 우상단: 안전모 감지 -->
         <div class="cctv-cell">
-          <div class="cctv-hud"><span><span class="cctv-ch">CH.03</span><span class="cctv-type">화재 감지</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
-          <img src="images/ai-fire-detect.png" alt="화재 감지">
-          <div class="cctv-stat"><span class="warn">🔥 FIRE 감지</span></div>
+          <div class="cctv-hud"><span><span class="cctv-ch">CH.01</span><span class="cctv-type">안전모 감지</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
+          <img src="images/ai-helmet-detect.png" alt="안전모 미착용 감지">
+          <div class="cctv-stat"><span>착용률 98%</span><span>감지 12명</span></div>
         </div>
-        <!-- CH.04 근로자 카운팅 -->
+        <!-- 우하단: 쓰러짐 감지 -->
         <div class="cctv-cell">
-          <div class="cctv-hud"><span><span class="cctv-ch">CH.04</span><span class="cctv-type">카운팅</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
-          <img src="images/ai-counting.png" alt="근로자 카운팅">
-          <div class="cctv-stat"><span>현장 인원 4명</span></div>
+          <div class="cctv-hud"><span><span class="cctv-ch">CH.02</span><span class="cctv-type">쓰러짐 감지</span></span><span class="cctv-rec"><span class="rdot"></span>REC</span></div>
+          <img src="images/ai-fall-detect.png" alt="쓰러짐 감지">
+          <div class="cctv-stat"><span class="warn">⚠ FALL DETECTED</span></div>
         </div>
-        <!-- 하단 정보 스트립 -->
+        <!-- 하단 미니 CCTV 스트립 -->
         <div class="dash-strip">
-          <div class="strip-block">
-            <span class="strip-icon">🌡</span>
-            <div><div class="strip-label">체감온도</div><div class="strip-val">28.3<span class="unit">°C</span></div></div>
-            <span class="strip-dot ok"></span>
+          <div class="strip-cam">
+            <img src="images/ai-fire-detect.png" alt="화재 감지">
+            <div class="cam-tag tag-warn">CH.03 화재 감지</div>
           </div>
-          <div class="strip-block">
-            <span class="strip-icon">💓</span>
-            <div><div class="strip-label">심박 평균</div><div class="strip-val">76<span class="unit">bpm</span></div></div>
-            <span class="strip-dot ok"></span>
+          <div class="strip-cam">
+            <img src="images/ai-counting.png" alt="근로자 카운팅">
+            <div class="cam-tag">CH.04 카운팅 4명</div>
           </div>
-          <div class="strip-block">
-            <span class="strip-icon">🎥</span>
-            <div><div class="strip-label">녹화 채널</div><div class="strip-val">3<span class="unit">ch</span></div></div>
-            <span class="strip-dot rec"></span>
-          </div>
-          <div class="strip-block">
-            <span class="strip-icon">📡</span>
-            <div><div class="strip-label">관제 현장</div><div class="strip-val">3<span class="unit">개소</span></div></div>
-            <span class="strip-dot ok"></span>
-          </div>
-          <div class="strip-block">
-            <span class="strip-icon">🛡</span>
-            <div><div class="strip-label">안전지수</div><div class="strip-val">99<span class="unit">점</span></div></div>
-            <span class="strip-dot ok"></span>
+          <div class="strip-info">
+            <div class="strip-row"><span class="sr-dot ok"></span><span class="sr-label">현장</span><span class="sr-val">3개소 정상</span></div>
+            <div class="strip-row"><span class="sr-dot rec"></span><span class="sr-label">녹화</span><span class="sr-val">3ch REC</span></div>
+            <div class="strip-row"><span class="sr-dot ok"></span><span class="sr-label">안전</span><span class="sr-val">99점</span></div>
           </div>
         </div>
       </div>
