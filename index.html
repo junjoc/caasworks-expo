@@ -30,7 +30,7 @@ nav a:hover{color:#2196F3}
 /* ── Hero ── */
 .hero{background:linear-gradient(135deg,#0d1b2a 0%,#1b2838 50%,#1a2940 100%);color:#fff;padding:80px 0 64px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(33,150,243,.15),transparent 70%);border-radius:50%}
-.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
 .hero-text h1{font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px}
 .hero-text h1 span{color:#64B5F6}
 .hero-text p{font-size:16px;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.7}
@@ -198,32 +198,43 @@ footer{background:#1a1a2e;color:rgba(255,255,255,.5);padding:36px 0;text-align:c
 footer .footer-logo{font-size:18px;font-weight:800;color:#fff;margin-bottom:10px}
 footer a{color:#64B5F6;text-decoration:none}
 
-/* ── Hero Dashboard (4-CCTV Square Grid) ── */
-.hero-dash{display:flex;flex-direction:column;gap:0;height:100%;background:rgba(0,0,0,.45);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-.cctv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:3px}
-.cctv-cell{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:1}
+/* ── Hero Dashboard (2x2 CCTV Grid + Signal Strip) ── */
+.hero-dash{display:flex;flex-direction:column;gap:0;height:100%;background:rgba(0,0,0,.5);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.cctv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;padding:3px;flex:1}
+.cctv-cell{position:relative;overflow:hidden;border-radius:6px}
 .cctv-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .cctv-cell:hover img{transform:scale(1.05)}
-.cctv-hud{position:absolute;top:0;left:0;right:0;padding:5px 8px;background:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 85%);display:flex;align-items:center;justify-content:space-between;z-index:2}
-.cctv-ch{font-size:9px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.5px}
-.cctv-type{font-size:7px;color:rgba(255,255,255,.5);margin-left:4px;font-weight:400}
-.cctv-rec{display:flex;align-items:center;gap:3px;font-size:7px;color:#ef5350;font-weight:700;letter-spacing:.5px}
-.cctv-rec .rdot{width:5px;height:5px;border-radius:50%;background:#ef5350;animation:pulse 1s infinite}
-.cctv-stat{position:absolute;bottom:0;left:0;right:0;padding:4px 6px;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);display:flex;gap:4px;z-index:2;flex-wrap:wrap}
-.cctv-stat span{font-size:7px;color:#fff;font-weight:600;background:rgba(76,175,80,.35);padding:2px 5px;border-radius:3px;backdrop-filter:blur(4px)}
+.cctv-hud{position:absolute;top:0;left:0;right:0;padding:6px 10px;background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 90%);display:flex;align-items:center;justify-content:space-between;z-index:2}
+.cctv-ch{font-size:11px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.5px}
+.cctv-type{font-size:9px;color:rgba(255,255,255,.55);margin-left:5px;font-weight:400}
+.cctv-rec{display:flex;align-items:center;gap:4px;font-size:9px;color:#ef5350;font-weight:700;letter-spacing:.5px}
+.cctv-rec .rdot{width:6px;height:6px;border-radius:50%;background:#ef5350;animation:pulse 1s infinite}
+.cctv-stat{position:absolute;bottom:0;left:0;right:0;padding:6px 8px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);display:flex;gap:5px;z-index:2;flex-wrap:wrap}
+.cctv-stat span{font-size:9px;color:#fff;font-weight:600;background:rgba(76,175,80,.35);padding:2px 7px;border-radius:3px;backdrop-filter:blur(4px)}
 .cctv-stat span.warn{background:rgba(239,83,80,.4);color:#ffcdd2}
+/* 스캔라인 오버레이 */
+.cctv-cell::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(100,181,246,.4),transparent);z-index:3;animation:scanline 3s linear infinite}
+@keyframes scanline{0%{top:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:100%;opacity:0}}
 /* 하단 시그널 스트립 */
-.dash-signals{display:flex;align-items:center;padding:0;background:rgba(255,255,255,.03);flex-shrink:0}
-.sig-item{display:flex;align-items:center;gap:6px;padding:7px 0;flex:1;justify-content:center;border-right:1px solid rgba(255,255,255,.06)}
+.dash-signals{display:flex;align-items:center;padding:0;background:linear-gradient(90deg,rgba(13,27,42,.95),rgba(26,41,64,.95));flex-shrink:0;position:relative;overflow:hidden}
+.dash-signals::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(100,181,246,.3),rgba(76,175,80,.3),transparent)}
+.sig-item{display:flex;align-items:center;gap:8px;padding:10px 0;flex:1;justify-content:center;border-right:1px solid rgba(255,255,255,.06);position:relative}
 .sig-item:last-child{border-right:none}
-.sig-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.sig-dot.live{background:#ef5350;animation:pulse 1s infinite}
-.sig-dot.ok{background:#4CAF50;animation:pulse 2.5s infinite}
-.sig-dot.warn{background:#FFC107}
+.sig-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;position:relative}
+.sig-dot::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid currentColor;opacity:.3;animation:ring-pulse 2s infinite}
+.sig-dot.live{background:#ef5350;color:#ef5350;box-shadow:0 0 8px rgba(239,83,80,.5);animation:pulse 1s infinite}
+.sig-dot.ok{background:#4CAF50;color:#4CAF50;box-shadow:0 0 8px rgba(76,175,80,.4);animation:pulse 2.5s infinite}
+.sig-dot.warn{background:#FFC107;color:#FFC107;box-shadow:0 0 8px rgba(255,193,7,.4);animation:pulse-warn 1.5s infinite}
+@keyframes ring-pulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.5);opacity:0}}
+@keyframes pulse-warn{0%,100%{opacity:1}50%{opacity:.4}}
 .sig-info{min-width:0}
-.sig-label{font-size:7px;color:rgba(255,255,255,.4);line-height:1}
-.sig-val{font-size:10px;font-weight:700;color:#fff;line-height:1.3}
-.sig-val .unit{font-size:7px;font-weight:400;color:rgba(255,255,255,.35)}
+.sig-label{font-size:8px;color:rgba(255,255,255,.4);line-height:1;text-transform:uppercase;letter-spacing:.5px}
+.sig-val{font-size:13px;font-weight:700;color:#fff;line-height:1.3}
+.sig-val .unit{font-size:8px;font-weight:400;color:rgba(255,255,255,.35)}
+/* SVG 웨이브라인 */
+.sig-wave{position:absolute;bottom:0;left:0;right:0;height:20px;opacity:.15;pointer-events:none}
+.sig-wave path{stroke:#64B5F6;stroke-width:1.5;fill:none;stroke-dasharray:200;animation:wave-draw 4s linear infinite}
+@keyframes wave-draw{0%{stroke-dashoffset:200}100%{stroke-dashoffset:0}}
 
 /* ── Toast ── */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:#1a1a2e;color:#fff;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,.2);z-index:999;transition:.4s;opacity:0}
@@ -249,8 +260,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
-  .hero-dash{min-height:auto}
-  .cctv-ch{font-size:10px}
+  .cctv-ch{font-size:12px}
+  .cctv-type{font-size:10px}
+  .cctv-stat span{font-size:10px}
+  .sig-val{font-size:14px}
+  .sig-label{font-size:9px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
   .sol-grid{gap:24px}
@@ -316,8 +330,12 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
-  .hero-dash{min-height:auto}
-  .cctv-ch{font-size:11px}
+  .cctv-ch{font-size:13px}
+  .cctv-type{font-size:11px}
+  .cctv-stat span{font-size:11px}
+  .sig-val{font-size:15px}
+  .sig-label{font-size:9px}
+  .sig-item{padding:12px 0}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
   .sol-grid{grid-template-columns:repeat(3,1fr);gap:28px}
@@ -464,6 +482,7 @@ footer a{color:#64B5F6;text-decoration:none}
           <div class="sig-item"><span class="sig-dot ok"></span><div class="sig-info"><div class="sig-label">안전지수</div><div class="sig-val">99 <span class="unit">점</span></div></div></div>
           <div class="sig-item"><span class="sig-dot ok"></span><div class="sig-info"><div class="sig-label">AI 감지</div><div class="sig-val">4종 <span class="unit">가동</span></div></div></div>
           <div class="sig-item"><span class="sig-dot warn"></span><div class="sig-info"><div class="sig-label">금일 알림</div><div class="sig-val">2 <span class="unit">건</span></div></div></div>
+          <svg class="sig-wave" viewBox="0 0 500 20" preserveAspectRatio="none"><path d="M0,10 Q25,2 50,10 T100,10 T150,10 T200,10 T250,10 T300,10 T350,10 T400,10 T450,10 T500,10"/></svg>
         </div>
       </div>
     </div>
