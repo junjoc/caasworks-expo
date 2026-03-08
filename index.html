@@ -73,7 +73,7 @@ nav a:hover{color:#2196F3}
 
 /* ── AI Solution ── */
 .ai-solution{padding:64px 0;background:#f8fafc}
-.ai-features{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ai-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .ai-feat{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #eee;transition:.3s}
 .ai-feat:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-3px)}
 .ai-feat-img{height:180px;overflow:hidden}
@@ -300,7 +300,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-stats{justify-content:center}
   .hero-visual{display:none}
   .sol-grid{grid-template-columns:repeat(2,1fr)}
-  .ai-features{grid-template-columns:1fr}
+  .ai-features{grid-template-columns:repeat(2,1fr)}
   .config-grid{grid-template-columns:repeat(2,1fr)}
   .prod-showcase{grid-template-columns:repeat(2,1fr)}
   .safety-grid{grid-template-columns:repeat(2,1fr)}
@@ -436,16 +436,50 @@ footer a{color:#64B5F6;text-decoration:none}
     </div>
     <div class="ai-features fade-in">
       <div class="ai-feat">
-        <div class="ai-feat-img"><img src="images/ai-helmet-detect.png" alt="AI 감지 분석"></div>
+        <div class="ai-feat-img"><img src="images/ai-helmet-detect.png" alt="안전모 감지"></div>
         <div class="ai-feat-body">
-          <h3>AI 감지 분석</h3>
-          <span class="ai-feat-tag">Smart Detection</span>
+          <h3>안전모 미착용 감지</h3>
+          <span class="ai-feat-tag">Helmet Detection</span>
           <ul>
-            <li>안전모 미착용 감지</li>
-            <li>쓰러짐 감지 (스켈레톤 기반)</li>
-            <li>이상 온도 감지 (열화상)</li>
-            <li>근로자 카운팅</li>
+            <li>AI가 안전모 착용 여부 실시간 판별</li>
+            <li>미착용 근로자 즉시 캡처 및 알림</li>
             <li>감지 간격 조절 가능 (즉시, 1분, 3분 등)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ai-feat">
+        <div class="ai-feat-img"><img src="images/ai-fall-detect.png" alt="쓰러짐 감지"></div>
+        <div class="ai-feat-body">
+          <h3>쓰러짐 감지</h3>
+          <span class="ai-feat-tag">Fall Detection</span>
+          <ul>
+            <li>스켈레톤 기반 자세 분석으로 쓰러짐 감지</li>
+            <li>의식 불명·낙상 사고 즉시 알림</li>
+            <li>Confidence 수치로 정확도 표시</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ai-feat">
+        <div class="ai-feat-img"><img src="images/ai-fire-detect.png" alt="화재 감지"></div>
+        <div class="ai-feat-body">
+          <h3>이상 온도·화재 감지</h3>
+          <span class="ai-feat-tag">Fire Detection</span>
+          <ul>
+            <li>열화상 CCTV 연동 이상 온도 감지</li>
+            <li>화재 발생 즉시 캡처 및 경고 알림</li>
+            <li>위험 상황 시 대시보드 팝업 + 경고음</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ai-feat">
+        <div class="ai-feat-img"><img src="images/ai-counting.png" alt="근로자 카운팅"></div>
+        <div class="ai-feat-body">
+          <h3>근로자 카운팅</h3>
+          <span class="ai-feat-tag">People Counting</span>
+          <ul>
+            <li>현장 내 근로자 수 실시간 집계</li>
+            <li>구역별 인원 파악 및 출입 관리</li>
+            <li>시간대별 투입 인력 통계 리포트</li>
           </ul>
         </div>
       </div>
@@ -458,31 +492,17 @@ footer a{color:#64B5F6;text-decoration:none}
             <li>시간대별 이력 및 통계 리포트 제공</li>
             <li>안전지수 산출, 취약 시간·구역 관리</li>
             <li>감지된 화면 확대 및 이력 관리</li>
-            <li>안전 리포트 추출 기능</li>
           </ul>
         </div>
       </div>
       <div class="ai-feat">
-        <div class="ai-feat-img"><img src="images/ai-fire-detect.png" alt="즉시 알림 시스템"></div>
+        <div class="ai-feat-img"><img src="images/dashboard-safety.png" alt="즉시 알림·오탐 관리"></div>
         <div class="ai-feat-body">
-          <h3>즉시 알림 시스템</h3>
-          <span class="ai-feat-tag">Instant Alert</span>
+          <h3>즉시 알림 · 오탐 관리</h3>
+          <span class="ai-feat-tag">Alert & Filtering</span>
           <ul>
             <li>카카오톡 알림 발송 (캡처본 + CCTV 화면)</li>
-            <li>관리자 등 수신인 최대 10명 등록</li>
-            <li>위험 상황 시 대시보드 팝업 + 경고음</li>
-            <li>팝업 종료 시까지 지속, 관제요원 주의 환기</li>
-          </ul>
-        </div>
-      </div>
-      <div class="ai-feat">
-        <div class="ai-feat-img"><img src="images/ai-fall-detect.png" alt="오탐 관리 시스템"></div>
-        <div class="ai-feat-body">
-          <h3>오탐 관리 시스템</h3>
-          <span class="ai-feat-tag">Filtering System</span>
-          <ul>
-            <li>오탐 상황 집계에서 제외 처리</li>
-            <li>안전관리자 사후 관리로 데이터 신뢰도 확보</li>
+            <li>오탐 상황 집계에서 제외, 데이터 신뢰도 확보</li>
             <li>지속적인 AI 학습으로 정확도 향상</li>
           </ul>
         </div>
