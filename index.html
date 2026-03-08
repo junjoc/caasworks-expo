@@ -81,17 +81,15 @@ nav a:hover{color:#2196F3}
 .ai-showcase-img img{width:100%;height:100%;object-fit:cover}
 .ai-showcase-label{padding:14px;font-size:14px;font-weight:700;color:#1a1a2e}
 .ai-showcase-label span{display:block;font-size:11px;color:#1976D2;font-weight:600;margin-top:4px}
-/* AI 기능 카드 */
-.ai-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.ai-feat{background:#fff;border-radius:14px;padding:28px;border:1px solid #eee;transition:.3s}
-.ai-feat:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-3px)}
-.ai-feat-icon{width:44px;height:44px;background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.ai-feat-icon svg{width:22px;height:22px;color:#1976D2}
-.ai-feat h3{font-size:15px;font-weight:700;margin-bottom:6px}
-.ai-feat-tag{font-size:11px;color:#1976D2;background:#E3F2FD;padding:2px 8px;border-radius:10px;font-weight:600;display:inline-block;margin-bottom:10px}
-.ai-feat ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.ai-feat li{display:flex;align-items:flex-start;gap:7px;font-size:13px;color:#555}
-.ai-feat li::before{content:'•';color:#2196F3;font-weight:700;margin-top:0;flex-shrink:0}
+/* AI 기능 요약 카드 */
+.ai-summary{background:#fff;border-radius:14px;padding:32px;border:1px solid #eee;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ai-summary-item{display:flex;align-items:flex-start;gap:14px}
+.ai-summary-icon{width:44px;height:44px;background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ai-summary-icon svg{width:22px;height:22px;color:#1976D2}
+.ai-summary-item h3{font-size:14px;font-weight:700;margin-bottom:6px}
+.ai-summary-item li{font-size:12px;color:#555;line-height:1.7}
+.ai-summary-item ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.ai-summary-item li::before{content:'• ';color:#2196F3;font-weight:700}
 
 /* ── System Config ── */
 .sys-config{padding:64px 0}
@@ -135,12 +133,14 @@ nav a:hover{color:#2196F3}
 
 /* ── Management System ── */
 .mgmt{padding:64px 0;background:#f8fafc}
-.mgmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.mgmt-card{background:#fff;border-radius:14px;padding:24px;border:1px solid #eee;text-align:center;transition:.3s}
-.mgmt-card:hover{border-color:#2196F3;box-shadow:0 6px 20px rgba(33,150,243,.08)}
-.mgmt-card .mgmt-icon{font-size:36px;margin-bottom:12px}
-.mgmt-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
-.mgmt-card p{font-size:12px;color:#777;line-height:1.6}
+.mgmt-hero{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06);margin-bottom:28px}
+.mgmt-hero img{width:100%;display:block}
+.mgmt-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mgmt-item{background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #eee;display:flex;align-items:flex-start;gap:12px;transition:.3s}
+.mgmt-item:hover{border-color:#2196F3;box-shadow:0 4px 16px rgba(33,150,243,.08)}
+.mgmt-num{width:28px;height:28px;background:linear-gradient(135deg,#2196F3,#1565C0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.mgmt-item h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.mgmt-item p{font-size:12px;color:#777;line-height:1.5}
 
 /* ── Clients ── */
 .clients{padding:64px 0;background:#f8fafc}
@@ -220,10 +220,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .ai-showcase{gap:24px}
   .ai-showcase-img{height:240px}
   .ai-showcase-label{font-size:16px;padding:16px}
-  .ai-features{gap:24px}
-  .ai-feat{padding:32px}
-  .ai-feat h3{font-size:17px}
-  .ai-feat li{font-size:14px}
+  .ai-summary{padding:36px;gap:32px}
+  .ai-summary-item h3{font-size:16px}
+  .ai-summary-item li{font-size:13px}
   .config-img{height:200px}
   .config-img img{padding:24px}
   .config-body{padding:24px}
@@ -244,11 +243,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .safety-body h3{font-size:16px}
   .safety-body p{font-size:13px}
   .safety-feat-tag{font-size:12px;padding:4px 12px}
-  .mgmt-grid{gap:24px}
-  .mgmt-card{padding:28px}
-  .mgmt-card h3{font-size:17px}
-  .mgmt-card p{font-size:14px}
-  .mgmt-card .mgmt-icon{font-size:42px}
+  .mgmt-list{gap:20px}
+  .mgmt-item{padding:24px 28px}
+  .mgmt-item h4{font-size:16px}
+  .mgmt-item p{font-size:13px}
+  .mgmt-num{width:32px;height:32px;font-size:15px}
   .client-logo{width:150px;height:58px;font-size:13px}
   .cta-text h2{font-size:32px}
   .cta-text p{font-size:16px}
@@ -282,10 +281,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .ai-showcase{gap:28px}
   .ai-showcase-img{height:280px}
   .ai-showcase-label{font-size:18px;padding:18px}
-  .ai-features{grid-template-columns:repeat(3,1fr);gap:28px}
-  .ai-feat{padding:36px}
-  .ai-feat h3{font-size:19px}
-  .ai-feat li{font-size:15px}
+  .ai-summary{padding:40px;gap:36px}
+  .ai-summary-item h3{font-size:18px}
+  .ai-summary-item li{font-size:14px}
   .config-grid{gap:28px}
   .config-img{height:240px}
   .config-body h4{font-size:19px}
@@ -297,7 +295,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .safety-img{height:200px}
   .safety-body h3{font-size:17px}
   .safety-body p{font-size:14px}
-  .mgmt-grid{grid-template-columns:repeat(3,1fr);gap:28px}
+  .mgmt-list{grid-template-columns:repeat(3,1fr);gap:24px}
+  .mgmt-item h4{font-size:17px}
+  .mgmt-item p{font-size:14px}
   .client-logo{width:170px;height:64px;font-size:14px}
   .cta-grid{gap:64px}
   .cta-text h2{font-size:36px}
@@ -313,11 +313,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-visual{display:none}
   .sol-grid{grid-template-columns:repeat(2,1fr)}
   .ai-showcase{grid-template-columns:repeat(2,1fr)}
-  .ai-features{grid-template-columns:1fr}
+  .ai-summary{grid-template-columns:1fr;padding:24px}
   .config-grid{grid-template-columns:repeat(2,1fr)}
   .prod-showcase{grid-template-columns:repeat(2,1fr)}
   .safety-grid{grid-template-columns:repeat(2,1fr)}
-  .mgmt-grid{grid-template-columns:repeat(2,1fr)}
+  .mgmt-list{grid-template-columns:repeat(2,1fr)}
   .cta-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
@@ -330,7 +330,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .config-grid{grid-template-columns:1fr}
   .prod-showcase{grid-template-columns:1fr}
   .safety-grid{grid-template-columns:repeat(2,1fr)}
-  .mgmt-grid{grid-template-columns:1fr}
+  .mgmt-list{grid-template-columns:1fr}
   nav{display:none}
 }
 
@@ -466,37 +466,40 @@ footer a{color:#64B5F6;text-decoration:none}
         <div class="ai-showcase-label">근로자 카운팅<span>People Counting</span></div>
       </div>
     </div>
-    <!-- AI 기능 소개 카드 -->
-    <div class="ai-features fade-in">
-      <div class="ai-feat">
-        <div class="ai-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <h3>AI 감지 분석</h3>
-        <span class="ai-feat-tag">Smart Detection</span>
-        <ul>
-          <li>안전모·쓰러짐·화재·카운팅 4종 AI 모델</li>
-          <li>감지 간격 조절 가능 (즉시, 1분, 3분 등)</li>
-          <li>커스텀 AI 모델 추가 가능</li>
-        </ul>
+    <!-- AI 기능 요약 (1개 통합 카드) -->
+    <div class="ai-summary fade-in">
+      <div class="ai-summary-item">
+        <div class="ai-summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div>
+          <h3>AI 감지 분석</h3>
+          <ul>
+            <li>4종 AI 모델 (안전모·쓰러짐·화재·카운팅)</li>
+            <li>감지 간격 조절 (즉시~3분)</li>
+            <li>커스텀 AI 모델 추가 가능</li>
+          </ul>
+        </div>
       </div>
-      <div class="ai-feat">
-        <div class="ai-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
-        <h3>안전 대시보드</h3>
-        <span class="ai-feat-tag">Data Analytics</span>
-        <ul>
-          <li>시간대별 이력 및 통계 리포트 제공</li>
-          <li>안전지수 산출, 취약 시간·구역 관리</li>
-          <li>감지 화면 확대 및 안전 리포트 추출</li>
-        </ul>
+      <div class="ai-summary-item">
+        <div class="ai-summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <div>
+          <h3>안전 대시보드</h3>
+          <ul>
+            <li>시간대별 이력 및 통계 리포트</li>
+            <li>안전지수 산출, 취약 구역 관리</li>
+            <li>감지 화면 확대 및 리포트 추출</li>
+          </ul>
+        </div>
       </div>
-      <div class="ai-feat">
-        <div class="ai-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <h3>즉시 알림 · 오탐 관리</h3>
-        <span class="ai-feat-tag">Alert & Filtering</span>
-        <ul>
-          <li>카카오톡 알림 발송 (캡처본 + CCTV 화면)</li>
-          <li>오탐 집계 제외, AI 학습으로 정확도 향상</li>
-          <li>대시보드 팝업 + 경고음으로 주의 환기</li>
-        </ul>
+      <div class="ai-summary-item">
+        <div class="ai-summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div>
+          <h3>즉시 알림 · 오탐 관리</h3>
+          <ul>
+            <li>카카오톡 알림 (캡처본 + 화면)</li>
+            <li>오탐 제외, AI 학습 정확도 향상</li>
+            <li>대시보드 팝업 + 경고음 환기</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -730,36 +733,51 @@ footer a{color:#64B5F6;text-decoration:none}
       <h2>카스웍스 <span class="accent">공정관리 시스템</span></h2>
       <p>본사와 현장 간 협업을 극대화하고 효율적으로 관리할 수 있습니다.</p>
     </div>
-    <div class="mgmt-grid fade-in">
-      <div class="mgmt-card">
-        <div class="mgmt-icon">⏱️</div>
-        <h3>시간별 히스토리</h3>
-        <p>시간대별 작업 상황 확인. 작업자 투입, 자재 반입, 공정표 비교·매칭</p>
+    <div class="mgmt-hero fade-in">
+      <img src="images/dashboard-project.png" alt="카스웍스 공정관리 대시보드">
+    </div>
+    <div class="mgmt-list fade-in">
+      <div class="mgmt-item">
+        <div class="mgmt-num">1</div>
+        <div>
+          <h4>시간별 히스토리</h4>
+          <p>시간대별 작업 상황 확인. 작업자 투입, 자재 반입, 공정표 비교·매칭</p>
+        </div>
       </div>
-      <div class="mgmt-card">
-        <div class="mgmt-icon">🎬</div>
-        <h3>타임랩스 자동 제작</h3>
-        <p>일/월별 1분 분량 타임랩스 자동 생성. 공정·날짜별 이력 관리, 풀타임 옵션</p>
+      <div class="mgmt-item">
+        <div class="mgmt-num">2</div>
+        <div>
+          <h4>타임랩스 자동 제작</h4>
+          <p>일/월별 1분 분량 타임랩스 자동 생성. 공정·날짜별 이력 관리</p>
+        </div>
       </div>
-      <div class="mgmt-card">
-        <div class="mgmt-icon">🖥️</div>
-        <h3>실시간 원격 모니터링</h3>
-        <p>PC·모바일로 언제 어디서나 현장 확인. 다수 현장 통합 관리</p>
+      <div class="mgmt-item">
+        <div class="mgmt-num">3</div>
+        <div>
+          <h4>실시간 원격 모니터링</h4>
+          <p>PC·모바일로 언제 어디서나 현장 확인. 다수 현장 통합 관리</p>
+        </div>
       </div>
-      <div class="mgmt-card">
-        <div class="mgmt-icon">👥</div>
-        <h3>다자간 실시간 협업</h3>
-        <p>영상 기반 소통으로 의사결정 시간 단축. 본사·현장·감리 통합 환경</p>
+      <div class="mgmt-item">
+        <div class="mgmt-num">4</div>
+        <div>
+          <h4>다자간 실시간 협업</h4>
+          <p>영상 기반 소통으로 의사결정 시간 단축. 본사·현장·감리 통합</p>
+        </div>
       </div>
-      <div class="mgmt-card">
-        <div class="mgmt-icon">📋</div>
-        <h3>중대재해 예방 관리</h3>
-        <p>TBM·안전교육, 위험성평가, MSDS, 작업허가서, 일일점검일지</p>
+      <div class="mgmt-item">
+        <div class="mgmt-num">5</div>
+        <div>
+          <h4>중대재해 예방 관리</h4>
+          <p>TBM·안전교육, 위험성평가, MSDS, 작업허가서, 일일점검일지</p>
+        </div>
       </div>
-      <div class="mgmt-card">
-        <div class="mgmt-icon">🎞️</div>
-        <h3>동영상 기록관리</h3>
-        <p>촬영계획서 작성, 웹 기반 동영상 편집기. 전경·중요공종·검측 촬영 통합</p>
+      <div class="mgmt-item">
+        <div class="mgmt-num">6</div>
+        <div>
+          <h4>동영상 기록관리</h4>
+          <p>촬영계획서 작성, 웹 기반 동영상 편집기. 전경·중요공종·검측 촬영</p>
+        </div>
       </div>
     </div>
   </div>
