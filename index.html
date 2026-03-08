@@ -39,19 +39,14 @@ nav a:hover{color:#2196F3}
 .hero-stats .stat-num{font-size:30px;font-weight:800;color:#64B5F6}
 .hero-stats .stat-label{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px}
 .hero-visual{position:relative}
-.hero-mockup{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;backdrop-filter:blur(10px)}
-.hero-mockup .mockup-header{display:flex;gap:6px;margin-bottom:14px}
-.hero-mockup .dot{width:9px;height:9px;border-radius:50%}
-.dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
-.mockup-content{background:#0f1923;border-radius:10px;padding:18px;min-height:180px;display:flex;flex-direction:column;gap:10px}
-.mock-bar{height:7px;border-radius:4px}
-.mock-bar-1{width:75%;background:linear-gradient(90deg,#2196F3,#64B5F6)}
-.mock-bar-2{width:55%;background:rgba(255,255,255,.1)}
-.mock-bar-3{width:90%;background:rgba(255,255,255,.05)}
-.mock-metric{display:flex;gap:10px;margin-top:8px}
-.mock-metric div{flex:1;background:rgba(255,255,255,.05);border-radius:8px;padding:10px;text-align:center}
-.mock-metric .mm-label{font-size:10px;color:rgba(255,255,255,.4)}
-.mock-metric .mm-val{font-size:16px;font-weight:700;color:#64B5F6;margin-top:4px}
+.hero-gallery{display:flex;flex-direction:column;gap:12px}
+.hero-gallery-main{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden}
+.hero-gallery-main img{width:100%;display:block;border-radius:16px}
+.hero-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hero-gallery-thumb{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;text-align:center;transition:.3s}
+.hero-gallery-thumb:hover{border-color:rgba(100,181,246,.5);transform:translateY(-2px)}
+.hero-gallery-thumb img{width:100%;height:80px;object-fit:contain;padding:8px;mix-blend-mode:screen;filter:brightness(1.2)}
+.hero-thumb-label{display:block;font-size:11px;font-weight:600;color:rgba(255,255,255,.6);padding:4px 0 8px;letter-spacing:.5px}
 .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(244,67,54,.2);padding:4px 12px;border-radius:20px;font-size:11px;color:#ef5350;font-weight:600}
 .live-badge::before{content:'';width:7px;height:7px;background:#ef5350;border-radius:50%;animation:pulse 1.5s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -104,12 +99,9 @@ nav a:hover{color:#2196F3}
 
 /* ── Products ── */
 .products{padding:64px 0;background:#f8fafc}
-.prod-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap}
-.prod-tab{padding:9px 20px;border-radius:30px;border:2px solid #e0e0e0;background:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:.3s;color:#666}
-.prod-tab.active,.prod-tab:hover{border-color:#2196F3;background:#2196F3;color:#fff}
-.prod-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.prod-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #eee;transition:.3s}
-.prod-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.07);transform:translateY(-3px)}
+.prod-showcase{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #eee;transition:.3s;cursor:pointer;text-decoration:none;color:inherit}
+.prod-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.07);transform:translateY(-3px);border-color:#2196F3}
 .prod-img{height:180px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:40px;color:#90CAF9;overflow:hidden}
 .prod-img img{width:100%;height:100%;object-fit:contain;padding:12px;mix-blend-mode:multiply}
 .prod-body{padding:20px}
@@ -210,6 +202,8 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
+  .hero-gallery-thumb img{height:100px;padding:10px}
+  .hero-thumb-label{font-size:12px;padding:6px 0 10px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
   .sol-grid{gap:24px}
@@ -228,8 +222,6 @@ footer a{color:#64B5F6;text-decoration:none}
   .config-body{padding:24px}
   .config-body h4{font-size:17px;margin-bottom:8px}
   .config-body p{font-size:14px}
-  .prod-tabs{gap:12px;margin-bottom:44px}
-  .prod-tab{padding:11px 24px;font-size:15px}
   .prod-img{height:220px}
   .prod-body{padding:24px}
   .prod-body h3{font-size:18px}
@@ -272,6 +264,8 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
+  .hero-gallery-thumb img{height:120px;padding:12px}
+  .hero-thumb-label{font-size:13px}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
   .sol-grid{grid-template-columns:repeat(3,1fr);gap:28px}
@@ -376,22 +370,71 @@ footer a{color:#64B5F6;text-decoration:none}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-mockup">
-        <div class="mockup-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><span style="margin-left:auto;font-size:11px;color:rgba(255,255,255,.4)">CaasWorks Dashboard</span></div>
-        <div class="mockup-content">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:12px;color:rgba(255,255,255,.5)">공정률</span>
-            <span class="live-badge">LIVE</span>
+      <div class="hero-gallery">
+        <div class="hero-gallery-main">
+          <img src="images/dashboard-project.png" alt="카스웍스 대시보드">
+          <span class="live-badge" style="position:absolute;top:14px;right:14px">LIVE</span>
+        </div>
+        <div class="hero-gallery-grid">
+          <div class="hero-gallery-thumb">
+            <img src="images/ai-helmet-detect.png" alt="AI 안전모 감지">
+            <span class="hero-thumb-label">AI 감지</span>
           </div>
-          <div class="mock-bar mock-bar-1"></div>
-          <div style="text-align:right;font-size:11px;color:#64B5F6;font-weight:700">75%</div>
-          <div class="mock-metric">
-            <div><div class="mm-label">안전지수</div><div class="mm-val">99</div></div>
-            <div><div class="mm-label">작업자</div><div class="mm-val">44명</div></div>
-            <div><div class="mm-label">이슈</div><div class="mm-val" style="color:#4CAF50">0건</div></div>
+          <div class="hero-gallery-thumb">
+            <img src="images/smart-helmet.png" alt="스마트 안전모">
+            <span class="hero-thumb-label">안전장비</span>
+          </div>
+          <div class="hero-gallery-thumb">
+            <img src="images/cctv-fixed-white.png" alt="CCTV 장비">
+            <span class="hero-thumb-label">CCTV</span>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products (카테고리 네비게이션) -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-title">
+      <span class="badge">제품 & 솔루션</span>
+      <h2>카스웍스 <span class="accent">제품 라인업</span></h2>
+      <p>현장 상황에 맞는 최적의 장비와 AI 솔루션을 제공합니다.</p>
+    </div>
+    <div class="prod-showcase fade-in">
+      <a class="prod-card" href="#ai-sol">
+        <div class="prod-img"><img src="images/ai-helmet-detect.png" alt="AI 솔루션"></div>
+        <div class="prod-body">
+          <h3>AI 솔루션</h3>
+          <p>안전모·쓰러짐·화재·카운팅 4종 AI 감지 모델. 실시간 분석 및 즉시 알림</p>
+          <div class="prod-tags"><span class="prod-tag">안전모 감지</span><span class="prod-tag">쓰러짐 감지</span><span class="prod-tag">화재 감지</span><span class="prod-tag">카운팅</span></div>
+        </div>
+      </a>
+      <a class="prod-card" href="#sys-config">
+        <div class="prod-img"><img src="images/tsitebox.png" alt="AI 영상장비"></div>
+        <div class="prod-body">
+          <h3>AI 영상장비</h3>
+          <p>T-SiteBox, 고정형·이동형·열화상·태양광 CCTV, 웨어러블 카메라</p>
+          <div class="prod-tags"><span class="prod-tag">T-SiteBox</span><span class="prod-tag">CCTV</span><span class="prod-tag">웨어러블</span></div>
+        </div>
+      </a>
+      <a class="prod-card" href="#safety">
+        <div class="prod-img"><img src="images/smart-helmet.png" alt="스마트 안전장비"></div>
+        <div class="prod-body">
+          <h3>스마트 안전장비</h3>
+          <p>IoT 기반 스마트 안전모, 밴드, 가스측정기, 안전고리, 태그 등 통합 안전장비</p>
+          <div class="prod-tags"><span class="prod-tag">안전모</span><span class="prod-tag">밴드</span><span class="prod-tag">가스측정기</span><span class="prod-tag">태그</span></div>
+        </div>
+      </a>
+      <a class="prod-card" href="#mgmt">
+        <div class="prod-img"><img src="images/dashboard-project.png" alt="공정관리 플랫폼"></div>
+        <div class="prod-body">
+          <h3>공정관리 플랫폼</h3>
+          <p>대시보드, 공정표, 타임랩스, 원격 모니터링, 중대재해 예방 올인원 관리</p>
+          <div class="prod-tags"><span class="prod-tag">대시보드</span><span class="prod-tag">타임랩스</span><span class="prod-tag">원격관리</span></div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -545,138 +588,6 @@ footer a{color:#64B5F6;text-decoration:none}
     </div>
     <div style="text-align:center;margin-top:24px;padding:20px;background:#E3F2FD;border-radius:12px" class="fade-in">
       <p style="font-size:13px;color:#1565C0;font-weight:600">커스텀 AI 모델 선택 가능 — 안전모 감지 · 쓰러짐 감지 · 이상온도 감지 · 근로자 카운팅 · 타임랩스 자동 생성</p>
-    </div>
-  </div>
-</section>
-
-<!-- Products -->
-<section class="products" id="products">
-  <div class="container">
-    <div class="section-title">
-      <span class="badge">Products & Solutions</span>
-      <h2>카스웍스 <span class="accent">제품 라인업</span></h2>
-      <p>현장 상황에 맞는 최적의 장비와 AI 솔루션을 제공합니다.</p>
-    </div>
-    <div class="prod-tabs">
-      <div class="prod-tab active" data-cat="all">전체</div>
-      <div class="prod-tab" data-cat="ai">AI 솔루션</div>
-      <div class="prod-tab" data-cat="vision">AI 영상장비</div>
-      <div class="prod-tab" data-cat="safety">스마트 안전장비</div>
-      <div class="prod-tab" data-cat="mgmt">공정관리 플랫폼</div>
-    </div>
-    <div class="prod-showcase fade-in" id="prodGrid">
-      <div class="prod-card" data-cat="ai">
-        <div class="prod-img"><img src="images/ai-helmet-detect.png" alt="안전모 감지 AI"></div>
-        <div class="prod-body">
-          <h3>안전모 미착용 감지</h3>
-          <p>AI가 CCTV 영상에서 안전모 착용 여부를 실시간 판별. 미착용 감지 시 즉시 캡처 및 관리자 알림</p>
-          <div class="prod-tags"><span class="prod-tag">실시간 감지</span><span class="prod-tag">자동 캡처</span><span class="prod-tag">즉시 알림</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="ai">
-        <div class="prod-img"><img src="images/ai-fall-detect.png" alt="쓰러짐 감지 AI"></div>
-        <div class="prod-body">
-          <h3>쓰러짐 감지</h3>
-          <p>스켈레톤 기반 자세 분석으로 근로자 쓰러짐 즉시 감지. Confidence 수치로 정확도 표시</p>
-          <div class="prod-tags"><span class="prod-tag">스켈레톤 분석</span><span class="prod-tag">낙상 감지</span><span class="prod-tag">긴급 알림</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="ai">
-        <div class="prod-img"><img src="images/ai-fire-detect.png" alt="화재 감지 AI"></div>
-        <div class="prod-body">
-          <h3>이상 온도·화재 감지</h3>
-          <p>열화상 CCTV 연동으로 이상 온도 및 화재 발생 즉시 감지. 경고 알림 및 대시보드 팝업</p>
-          <div class="prod-tags"><span class="prod-tag">열화상 연동</span><span class="prod-tag">화재 감지</span><span class="prod-tag">경고 팝업</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="ai">
-        <div class="prod-img"><img src="images/ai-counting.png" alt="근로자 카운팅 AI"></div>
-        <div class="prod-body">
-          <h3>근로자 카운팅</h3>
-          <p>현장 내 근로자 수 실시간 집계. 구역별 인원 파악, 출입 관리, 시간대별 투입 인력 통계</p>
-          <div class="prod-tags"><span class="prod-tag">실시간 집계</span><span class="prod-tag">구역별 관리</span><span class="prod-tag">통계 리포트</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="vision">
-        <div class="prod-img"><img src="images/tsitebox.png" alt="T-SiteBox"></div>
-        <div class="prod-body">
-          <h3>T-SiteBox</h3>
-          <p>SK텔레콤 공동 개발 스마트 라우터 AI 솔루션. 커스텀 AI 모델 탑재, 실시간 모니터링, 타임랩스 자동 제작, CCTV 호환</p>
-          <div class="prod-tags"><span class="prod-tag">AI 탑재</span><span class="prod-tag">LTE/IoT</span><span class="prod-tag">CCTV 호환</span><span class="prod-tag">API 연동</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="vision">
-        <div class="prod-img"><img src="images/cctv-fixed-white.png" alt="지능형 CCTV"></div>
-        <div class="prod-body">
-          <h3>지능형 CCTV</h3>
-          <p>이동형/고정형/4K 선택 가능. FHD 화질, IP66 방수방진. 실시간 모니터링과 타임랩스 자동 생성</p>
-          <div class="prod-tags"><span class="prod-tag">FHD</span><span class="prod-tag">IP66</span><span class="prod-tag">이동형/고정형</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="vision">
-        <div class="prod-img"><img src="images/cctv-thermal.png" alt="열화상 CCTV"></div>
-        <div class="prod-body">
-          <h3>열화상 CCTV</h3>
-          <p>화재와 현장 모니터링 동시 수행. 4MP 해상도, IP67 방수방진, 최대 123m 열 감지 거리</p>
-          <div class="prod-tags"><span class="prod-tag">열감지</span><span class="prod-tag">4MP</span><span class="prod-tag">IP67</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="vision">
-        <div class="prod-img"><img src="images/cctv-solar.png" alt="태양광 CCTV"></div>
-        <div class="prod-body">
-          <h3>태양광 CCTV</h3>
-          <p>전원 공급이 어려운 나대지·오지에 최적. 태양광 패널 내장, 이동형/고정형, 다수 동시 관제</p>
-          <div class="prod-tags"><span class="prod-tag">태양광</span><span class="prod-tag">자가발전</span><span class="prod-tag">IP67</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="vision">
-        <div class="prod-img"><img src="images/wearable-cam.png" alt="웨어러블 카메라"></div>
-        <div class="prod-body">
-          <h3>웨어러블 카메라</h3>
-          <p>초경량 헤드캠·바디캠·이어캠. USB-C 스마트폰 연결, 무선 라이브 송출. 사고 즉시 영상 근거 확보</p>
-          <div class="prod-tags"><span class="prod-tag">무선 송출</span><span class="prod-tag">초경량</span><span class="prod-tag">USB-C</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="safety">
-        <div class="prod-img"><img src="images/smart-helmet.png" alt="스마트 안전모"></div>
-        <div class="prod-body">
-          <h3>스마트 안전모</h3>
-          <p>착용 감지 센서로 미착용 시 음성 안내. 근로자 위치 실시간 파악, SOS 긴급 호출 기능</p>
-          <div class="prod-tags"><span class="prod-tag">착용 감지</span><span class="prod-tag">위치 트래킹</span><span class="prod-tag">음성 안내</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="safety">
-        <div class="prod-img"><img src="images/smart-band.png" alt="스마트 밴드"></div>
-        <div class="prod-body">
-          <h3>스마트 밴드</h3>
-          <p>피부 온도 실시간 측정, 위험 온도 즉시 경고. 비정상 심박 감지 시 관리자 알림</p>
-          <div class="prod-tags"><span class="prod-tag">체온 측정</span><span class="prod-tag">심박 모니터링</span><span class="prod-tag">온열질환 예방</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="safety">
-        <div class="prod-img"><img src="images/gas-detector.png" alt="복합 가스측정기"></div>
-        <div class="prod-body">
-          <h3>복합 가스측정기</h3>
-          <p>산소·일산화탄소·황화수소·가연성가스 4종 검측. 위험 감지 시 앱 즉시 알림</p>
-          <div class="prod-tags"><span class="prod-tag">4종 가스</span><span class="prod-tag">밀폐공간</span><span class="prod-tag">즉시 알림</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="safety">
-        <div class="prod-img"><img src="images/smart-tag.png" alt="스마트 태그"></div>
-        <div class="prod-body">
-          <h3>스마트 태그</h3>
-          <p>SOS 긴급신호 1클릭, 작업중지권 2클릭 즉시 행사. 체감온도 센서 온열질환 예방</p>
-          <div class="prod-tags"><span class="prod-tag">긴급 SOS</span><span class="prod-tag">작업중지권</span><span class="prod-tag">체감온도</span></div>
-        </div>
-      </div>
-      <div class="prod-card" data-cat="mgmt">
-        <div class="prod-img"><img src="images/dashboard-project.png" alt="공정관리 플랫폼"></div>
-        <div class="prod-body">
-          <h3>공정관리 플랫폼</h3>
-          <p>대시보드, 공정표, 작업보고, 회의록, 서류함, 도면 등 올인원 건설 프로젝트 관리</p>
-          <div class="prod-tags"><span class="prod-tag">대시보드</span><span class="prod-tag">타임랩스</span><span class="prod-tag">클라우드</span></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -995,7 +906,7 @@ footer a{color:#64B5F6;text-decoration:none}
     <p style="margin-bottom:6px">Construction as a Service Works</p>
     <p>산업·건설 현장에 최적화된 스마트 AI 솔루션</p>
     <p style="margin-top:14px">
-      <a href="https://www.aicon.ai" target="_blank">www.aicon.ai</a> &nbsp;|&nbsp; AICON &nbsp;|&nbsp; 1666-1967
+      <a href="https://www.ai-con.co.kr" target="_blank">www.ai-con.co.kr</a> &nbsp;|&nbsp; AICON &nbsp;|&nbsp; 1666-1967
     </p>
     <p style="margin-top:16px;font-size:11px;color:rgba(255,255,255,.3)">&copy; 2026 AICON Inc. All rights reserved.</p>
   </div>
@@ -1010,33 +921,6 @@ const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})
 },{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
-
-// ── Product tab filter ──
-function filterProducts(cat){
-  const cards = document.querySelectorAll('.prod-card');
-  if(cat==='all'){
-    // 전체: 각 카테고리별 첫 번째 카드만 표시
-    const shown = {};
-    cards.forEach(card=>{
-      const c = card.dataset.cat;
-      if(!shown[c]){shown[c]=true;card.style.display='';}
-      else{card.style.display='none';}
-    });
-  } else {
-    cards.forEach(card=>{
-      card.style.display = card.dataset.cat===cat ? '' : 'none';
-    });
-  }
-}
-document.querySelectorAll('.prod-tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.prod-tab').forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    filterProducts(tab.dataset.cat);
-  });
-});
-// 초기 로드 시 전체 탭 적용
-filterProducts('all');
 
 // ── Toast helper ──
 function showToast(msg, duration=3000){
