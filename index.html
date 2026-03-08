@@ -97,6 +97,23 @@ nav a:hover{color:#2196F3}
 .config-body h4{font-size:15px;font-weight:700;margin-bottom:6px}
 .config-body p{font-size:13px;color:#777;line-height:1.6}
 
+/* ── Scene Guide (상황별 가이드) ── */
+.scene-guide{padding:64px 0}
+.scene-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.scene-tab{padding:9px 20px;border-radius:30px;border:2px solid #e0e0e0;background:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:.3s;color:#666}
+.scene-tab.active,.scene-tab:hover{border-color:#2196F3;background:#2196F3;color:#fff}
+.scene-panel{display:none}
+.scene-panel.active{display:block}
+.scene-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.scene-img{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.scene-img img{width:100%;display:block}
+.scene-items{display:flex;flex-direction:column;gap:14px}
+.scene-item{background:#f8fafc;border-radius:12px;padding:20px 24px;border:1px solid #eee;display:flex;align-items:flex-start;gap:14px;transition:.3s}
+.scene-item:hover{border-color:#2196F3;box-shadow:0 4px 16px rgba(33,150,243,.08)}
+.scene-item .scene-num{width:28px;height:28px;background:linear-gradient(135deg,#2196F3,#1565C0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.scene-item h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.scene-item p{font-size:12px;color:#777;line-height:1.5}
+
 /* ── Products ── */
 .products{padding:64px 0;background:#f8fafc}
 .prod-showcase{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -217,6 +234,11 @@ footer a{color:#64B5F6;text-decoration:none}
   .ai-summary{padding:36px;gap:32px}
   .ai-summary-item h3{font-size:16px}
   .ai-summary-item li{font-size:13px}
+  .scene-tab{padding:11px 24px;font-size:15px}
+  .scene-layout{gap:36px}
+  .scene-item{padding:24px 28px}
+  .scene-item h4{font-size:16px}
+  .scene-item p{font-size:13px}
   .config-img{height:200px}
   .config-img img{padding:24px}
   .config-body{padding:24px}
@@ -278,6 +300,10 @@ footer a{color:#64B5F6;text-decoration:none}
   .ai-summary{padding:40px;gap:36px}
   .ai-summary-item h3{font-size:18px}
   .ai-summary-item li{font-size:14px}
+  .scene-layout{gap:48px}
+  .scene-item{padding:28px 32px}
+  .scene-item h4{font-size:17px}
+  .scene-item p{font-size:14px}
   .config-grid{gap:28px}
   .config-img{height:240px}
   .config-body h4{font-size:19px}
@@ -308,6 +334,9 @@ footer a{color:#64B5F6;text-decoration:none}
   .sol-grid{grid-template-columns:repeat(2,1fr)}
   .ai-showcase{grid-template-columns:repeat(2,1fr)}
   .ai-summary{grid-template-columns:1fr;padding:24px}
+  .scene-layout{grid-template-columns:1fr}
+  .scene-tabs{gap:6px}
+  .scene-tab{padding:7px 14px;font-size:12px}
   .config-grid{grid-template-columns:repeat(2,1fr)}
   .prod-showcase{grid-template-columns:repeat(2,1fr)}
   .safety-grid{grid-template-columns:repeat(2,1fr)}
@@ -414,7 +443,7 @@ footer a{color:#64B5F6;text-decoration:none}
       <a class="prod-card" href="#sys-config">
         <div class="prod-img"><img src="images/tsitebox.png" alt="AI 영상장비"></div>
         <div class="prod-body">
-          <h3>AI 영상장비</h3>
+          <h3>AI CCTV 라인업</h3>
           <p>T-SiteBox, 고정형·이동형·열화상·태양광 CCTV, 웨어러블 카메라</p>
           <div class="prod-tags"><span class="prod-tag">T-SiteBox</span><span class="prod-tag">CCTV</span><span class="prod-tag">웨어러블</span></div>
         </div>
@@ -552,8 +581,8 @@ footer a{color:#64B5F6;text-decoration:none}
 <section class="sys-config" id="sys-config">
   <div class="container">
     <div class="section-title">
-      <span class="badge">Configuration</span>
-      <h2>AI 영상 <span class="accent">시스템 구성</span></h2>
+      <span class="badge">CCTV Lineup</span>
+      <h2>AI CCTV <span class="accent">라인업</span></h2>
       <p>현장 상황을 고려하여 가장 적합한 장비와 AI 모델을 선택합니다.</p>
     </div>
     <div class="config-grid fade-in">
@@ -759,6 +788,103 @@ footer a{color:#64B5F6;text-decoration:none}
   </div>
 </section>
 
+<!-- Scene Guide (상황별 솔루션 가이드) -->
+<section class="scene-guide" id="scene-guide">
+  <div class="container">
+    <div class="section-title">
+      <span class="badge">솔루션 가이드</span>
+      <h2>상황별 <span class="accent">솔루션 구성</span></h2>
+      <p>현장 환경과 목적에 따라 최적의 솔루션 조합을 제안합니다.</p>
+    </div>
+    <div class="scene-tabs">
+      <div class="scene-tab active" data-scene="worker">근로자 안전</div>
+      <div class="scene-tab" data-scene="site">현장 안전</div>
+      <div class="scene-tab" data-scene="disaster">중대재해 예방</div>
+      <div class="scene-tab" data-scene="ai">AI CCTV</div>
+      <div class="scene-tab" data-scene="video">동영상 기록관리</div>
+      <div class="scene-tab" data-scene="total">종합 솔루션</div>
+    </div>
+
+    <!-- 근로자 안전 -->
+    <div class="scene-panel active" id="scene-worker">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-worker-safety.png" alt="근로자 안전 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>스마트 안전모</h4><p>착용 감지 센서로 미착용 시 음성 안내. 근로자 위치 실시간 파악</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>스마트 밴드</h4><p>피부 온도 실시간 측정, 위험 온도 즉시 경고. 비정상 심박 감지 시 알림</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>스마트 안전고리</h4><p>고도 센서로 안전고리 착용 자동 감지. 미착용 시 음성 유도, SOS 호출</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>체감온도계</h4><p>온도·습도 실시간 수집, 체감온도 자동 산출. 구간별 안전보건 조치</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 현장 안전 -->
+    <div class="scene-panel" id="scene-site">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-site-safety.png" alt="현장 안전 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>중장비 위치추적기</h4><p>중장비 충돌·전복 사고 감지, 관리자 즉시 알림 발송</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>복합 가스측정기</h4><p>산소·CO·H₂S·가연성가스 4종 검측. 위험 감지 시 앱 즉시 알림</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>변위감지기</h4><p>기울기·충격·진동 감지. 3종 경사계 센서, 위험 시 즉시 알림</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>작업중지권</h4><p>위험 상황 시 버튼으로 관리자 즉시 알림. 경광등·사이렌 위험 공유</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 중대재해 예방 -->
+    <div class="scene-panel" id="scene-disaster">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-disaster-prevention.png" alt="중대재해 예방 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>TBM · 안전교육</h4><p>모바일 근로자 참여, 안전교육 시간 인정, 출퇴근 연동, 모바일 서명</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>위험성평가</h4><p>다양한 평가 분류 체계, 평가 방식 템플릿, 전자결재 기능 제공</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>MSDS · 작업허가서</h4><p>물질안전보건자료, 위험작업 허가서, 일일 점검일지, 방문자 교육</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>안전 상황 관제실</h4><p>전체 현장 모니터링, 안전 사고 데이터 비교, 안전보건 조직도 관리</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI CCTV -->
+    <div class="scene-panel" id="scene-ai">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-ai-cctv.png" alt="AI CCTV 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>안전모 착용 감지</h4><p>CCTV 실시간 안전모 착용/미착용 감지, 관리자 알림 및 리포트 제공</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>쓰러짐 감지</h4><p>스켈레톤 기반으로 쓰러지는 과정부터 감지 시작. 정밀 AI 분석</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>열화상 · 화재 감지</h4><p>근로자 체온과 현장 온도에 실시간 반응, 설정값 초과 시 즉시 알림</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>안전 상황 관제실</h4><p>전체 현장 AI 모니터링, 안전 사고 데이터 비교, 실시간 관제</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 동영상 기록관리 -->
+    <div class="scene-panel" id="scene-video">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-video-mgmt.png" alt="동영상 기록관리 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>전경 · 상시 촬영</h4><p>고정형 AI CCTV로 공사 현장 전체 전경 촬영. 상하좌우 회전 가능</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>중요공종 촬영</h4><p>이동형 CCTV로 배터리 방식 자유로운 이동. 타임랩스 자동 생성</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>검측 촬영</h4><p>웨어러블 카메라로 철근 배근, 동바리 등 CCTV 거치 어려운 곳 촬영</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>촬영계획서 · 편집기</h4><p>국내 유일 촬영계획서 작성 솔루션과 웹 기반 동영상 편집기 제공</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 종합 솔루션 -->
+    <div class="scene-panel" id="scene-total">
+      <div class="scene-layout fade-in">
+        <div class="scene-img"><img src="images/scene-integrated.png" alt="종합 솔루션"></div>
+        <div class="scene-items">
+          <div class="scene-item"><div class="scene-num">1</div><div><h4>스마트 안전장비</h4><p>안전모·밴드·작업중지권·체감온도계·변위감지기·중장비 협착방지</p></div></div>
+          <div class="scene-item"><div class="scene-num">2</div><div><h4>동영상 기록관리</h4><p>전경·상시·중요공종·검측 촬영, 촬영계획서, 영상 편집기</p></div></div>
+          <div class="scene-item"><div class="scene-num">3</div><div><h4>AI CCTV</h4><p>안전모 착용 감지, 쓰러짐 감지, 이상온도 감지, 실시간 모니터링</p></div></div>
+          <div class="scene-item"><div class="scene-num">4</div><div><h4>안전 상황 관제실</h4><p>전체 현장 모니터링, 근로자 안전장비 확인, AI+영상 통합 관제</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Clients Logos -->
 <section class="clients" id="clients">
   <div class="container">
@@ -921,6 +1047,19 @@ const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})
 },{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// ── Scene tab switch ──
+document.querySelectorAll('.scene-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.scene-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.scene-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = document.getElementById('scene-'+tab.dataset.scene);
+    panel.classList.add('active');
+    // 새 패널 fade-in 트리거
+    panel.querySelectorAll('.fade-in').forEach(el=>{el.classList.remove('visible');obs.observe(el)});
+  });
+});
 
 // ── Toast helper ──
 function showToast(msg, duration=3000){
