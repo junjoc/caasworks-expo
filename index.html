@@ -104,10 +104,11 @@ nav a:hover{color:#2196F3}
 .scene-tab.active,.scene-tab:hover{border-color:#2196F3;background:#2196F3;color:#fff}
 .scene-panel{display:none}
 .scene-panel.active{display:block}
-.scene-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
-.scene-img{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.scene-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.scene-img{position:relative;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 30px rgba(0,0,0,.06);display:flex;align-items:center}
 .scene-img img{width:100%;display:block}
-.scene-items{display:flex;flex-direction:column;gap:14px}
+.scene-marker{position:absolute;width:26px;height:26px;background:linear-gradient(135deg,#2196F3,#1565C0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(33,150,243,.4);z-index:2;border:2px solid #fff;pointer-events:none}
+.scene-items{display:flex;flex-direction:column;gap:14px;justify-content:center}
 .scene-item{background:#f8fafc;border-radius:12px;padding:20px 24px;border:1px solid #eee;display:flex;align-items:flex-start;gap:14px;transition:.3s}
 .scene-item:hover{border-color:#2196F3;box-shadow:0 4px 16px rgba(33,150,243,.08)}
 .scene-item .scene-num{width:28px;height:28px;background:linear-gradient(135deg,#2196F3,#1565C0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
@@ -371,10 +372,11 @@ footer a{color:#64B5F6;text-decoration:none}
       <img src="images/caasworks-logo.png" alt="CaasWorks">
     </a>
     <nav>
-      <a href="#solutions">솔루션</a>
-      <a href="#ai-sol">AI 기능</a>
       <a href="#products">제품</a>
+      <a href="#ai-sol">AI 솔루션</a>
+      <a href="#sys-config">CCTV 라인업</a>
       <a href="#safety">안전장비</a>
+      <a href="#scene-guide">상황별 가이드</a>
       <a href="#clients">고객사</a>
       <a href="#contact" class="btn-cta">상담 신청</a>
     </nav>
@@ -808,7 +810,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- 근로자 안전 -->
     <div class="scene-panel active" id="scene-worker">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-worker-safety.png" alt="근로자 안전 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-worker-safety.png" alt="근로자 안전 솔루션">
+          <span class="scene-marker" style="top:18%;left:42%">1</span>
+          <span class="scene-marker" style="top:38%;left:62%">2</span>
+          <span class="scene-marker" style="top:28%;left:28%">3</span>
+          <span class="scene-marker" style="top:68%;left:50%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>스마트 안전모</h4><p>착용 감지 센서로 미착용 시 음성 안내. 근로자 위치 실시간 파악</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>스마트 밴드</h4><p>피부 온도 실시간 측정, 위험 온도 즉시 경고. 비정상 심박 감지 시 알림</p></div></div>
@@ -821,7 +829,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- 현장 안전 -->
     <div class="scene-panel" id="scene-site">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-site-safety.png" alt="현장 안전 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-site-safety.png" alt="현장 안전 솔루션">
+          <span class="scene-marker" style="top:35%;left:22%">1</span>
+          <span class="scene-marker" style="top:55%;left:35%">2</span>
+          <span class="scene-marker" style="top:30%;left:68%">3</span>
+          <span class="scene-marker" style="top:55%;left:75%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>중장비 위치추적기</h4><p>중장비 충돌·전복 사고 감지, 관리자 즉시 알림 발송</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>복합 가스측정기</h4><p>산소·CO·H₂S·가연성가스 4종 검측. 위험 감지 시 앱 즉시 알림</p></div></div>
@@ -834,7 +848,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- 중대재해 예방 -->
     <div class="scene-panel" id="scene-disaster">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-disaster-prevention.png" alt="중대재해 예방 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-disaster-prevention.png" alt="중대재해 예방 솔루션">
+          <span class="scene-marker" style="top:20%;left:22%">1</span>
+          <span class="scene-marker" style="top:20%;left:72%">2</span>
+          <span class="scene-marker" style="top:68%;left:22%">3</span>
+          <span class="scene-marker" style="top:68%;left:72%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>TBM · 안전교육</h4><p>모바일 근로자 참여, 안전교육 시간 인정, 출퇴근 연동, 모바일 서명</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>위험성평가</h4><p>다양한 평가 분류 체계, 평가 방식 템플릿, 전자결재 기능 제공</p></div></div>
@@ -847,7 +867,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- AI CCTV -->
     <div class="scene-panel" id="scene-ai">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-ai-cctv.png" alt="AI CCTV 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-ai-cctv.png" alt="AI CCTV 솔루션">
+          <span class="scene-marker" style="top:22%;left:20%">1</span>
+          <span class="scene-marker" style="top:22%;left:68%">2</span>
+          <span class="scene-marker" style="top:30%;left:50%">3</span>
+          <span class="scene-marker" style="top:72%;left:58%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>안전모 착용 감지</h4><p>CCTV 실시간 안전모 착용/미착용 감지, 관리자 알림 및 리포트 제공</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>쓰러짐 감지</h4><p>스켈레톤 기반으로 쓰러지는 과정부터 감지 시작. 정밀 AI 분석</p></div></div>
@@ -860,7 +886,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- 동영상 기록관리 -->
     <div class="scene-panel" id="scene-video">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-video-mgmt.png" alt="동영상 기록관리 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-video-mgmt.png" alt="동영상 기록관리 솔루션">
+          <span class="scene-marker" style="top:20%;left:22%">1</span>
+          <span class="scene-marker" style="top:20%;left:72%">2</span>
+          <span class="scene-marker" style="top:68%;left:22%">3</span>
+          <span class="scene-marker" style="top:68%;left:72%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>전경 · 상시 촬영</h4><p>고정형 AI CCTV로 공사 현장 전체 전경 촬영. 상하좌우 회전 가능</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>중요공종 촬영</h4><p>이동형 CCTV로 배터리 방식 자유로운 이동. 타임랩스 자동 생성</p></div></div>
@@ -873,7 +905,13 @@ footer a{color:#64B5F6;text-decoration:none}
     <!-- 종합 솔루션 -->
     <div class="scene-panel" id="scene-total">
       <div class="scene-layout fade-in">
-        <div class="scene-img"><img src="images/scene-integrated.png" alt="종합 솔루션"></div>
+        <div class="scene-img">
+          <img src="images/scene-integrated.png" alt="종합 솔루션">
+          <span class="scene-marker" style="top:55%;left:18%">1</span>
+          <span class="scene-marker" style="top:25%;left:40%">2</span>
+          <span class="scene-marker" style="top:35%;left:65%">3</span>
+          <span class="scene-marker" style="top:55%;left:82%">4</span>
+        </div>
         <div class="scene-items">
           <div class="scene-item"><div class="scene-num">1</div><div><h4>스마트 안전장비</h4><p>안전모·밴드·작업중지권·체감온도계·변위감지기·중장비 협착방지</p></div></div>
           <div class="scene-item"><div class="scene-num">2</div><div><h4>동영상 기록관리</h4><p>전경·상시·중요공종·검측 촬영, 촬영계획서, 영상 편집기</p></div></div>
