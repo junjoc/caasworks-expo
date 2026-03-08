@@ -45,7 +45,7 @@ nav a:hover{color:#2196F3}
 .hero-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .hero-gallery-thumb{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;text-align:center;transition:.3s}
 .hero-gallery-thumb:hover{border-color:rgba(100,181,246,.5);transform:translateY(-2px)}
-.hero-gallery-thumb img{width:100%;height:80px;object-fit:contain;padding:8px;mix-blend-mode:screen;filter:brightness(1.2)}
+.hero-gallery-thumb img{width:100%;height:80px;object-fit:cover}
 .hero-thumb-label{display:block;font-size:11px;font-weight:600;color:rgba(255,255,255,.6);padding:4px 0 8px;letter-spacing:.5px}
 .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(244,67,54,.2);padding:4px 12px;border-radius:20px;font-size:11px;color:#ef5350;font-weight:600}
 .live-badge::before{content:'';width:7px;height:7px;background:#ef5350;border-radius:50%;animation:pulse 1.5s infinite}
@@ -202,7 +202,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text p{font-size:18px;line-height:1.8}
   .hero-stats .stat-num{font-size:36px}
   .hero-stats .stat-label{font-size:14px}
-  .hero-gallery-thumb img{height:100px;padding:10px}
+  .hero-gallery-thumb img{height:100px}
   .hero-thumb-label{font-size:12px;padding:6px 0 10px}
   .section-title h2{font-size:36px}
   .section-title p{font-size:16px}
@@ -264,7 +264,7 @@ footer a{color:#64B5F6;text-decoration:none}
   .hero-text h1{font-size:52px}
   .hero-text p{font-size:20px}
   .hero-stats .stat-num{font-size:40px}
-  .hero-gallery-thumb img{height:120px;padding:12px}
+  .hero-gallery-thumb img{height:120px}
   .hero-thumb-label{font-size:13px}
   .section-title h2{font-size:40px}
   .section-title p{font-size:18px}
@@ -372,21 +372,21 @@ footer a{color:#64B5F6;text-decoration:none}
     <div class="hero-visual">
       <div class="hero-gallery">
         <div class="hero-gallery-main">
-          <img src="images/dashboard-project.png" alt="카스웍스 대시보드">
-          <span class="live-badge" style="position:absolute;top:14px;right:14px">LIVE</span>
+          <img src="images/ai-helmet-detect.png" alt="AI 안전모 감지">
+          <span class="live-badge" style="position:absolute;top:14px;right:14px">AI 감지 중</span>
         </div>
         <div class="hero-gallery-grid">
           <div class="hero-gallery-thumb">
-            <img src="images/ai-helmet-detect.png" alt="AI 안전모 감지">
-            <span class="hero-thumb-label">AI 감지</span>
+            <img src="images/ai-fall-detect.png" alt="쓰러짐 감지">
+            <span class="hero-thumb-label">쓰러짐 감지</span>
           </div>
           <div class="hero-gallery-thumb">
-            <img src="images/smart-helmet.png" alt="스마트 안전모">
-            <span class="hero-thumb-label">안전장비</span>
+            <img src="images/ai-fire-detect.png" alt="화재 감지">
+            <span class="hero-thumb-label">화재 감지</span>
           </div>
           <div class="hero-gallery-thumb">
-            <img src="images/cctv-fixed-white.png" alt="CCTV 장비">
-            <span class="hero-thumb-label">CCTV</span>
+            <img src="images/ai-counting.png" alt="근로자 카운팅">
+            <span class="hero-thumb-label">카운팅</span>
           </div>
         </div>
       </div>
